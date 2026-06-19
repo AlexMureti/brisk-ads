@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brisk Credit · Web Screens</title>
+<meta name="description" content="Brisk Credit Ltd brand screens & ads — open in any browser, press F for fullscreen signage." />
+<link rel="icon" type="image/png" href="favicon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Brisk Credit Ltd" />
+<meta property="og:title" content="Brisk Credit — Web Screens & Ads" />
+<meta property="og:description" content="Animated brand screens & ads from Brisk Credit Ltd." />
+<meta property="og:image" content="https://YOURNAME.github.io/brisk-ads/og-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{--orange:#FF6A18;--gold:#FFB45A;--blue:#229CEF;--ink:#06080E;--paper:#EAF2FB;--muted:#9FB2CC;
+    --font:"Manrope","Segoe UI",system-ui,sans-serif}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font);color:var(--paper);min-height:100vh;
+    background:radial-gradient(120% 90% at 18% 8%,#1A1206 0%,#0E1018 44%,var(--ink) 72%),linear-gradient(180deg,#0A0905,#05070C);
+    display:flex;flex-direction:column;align-items:center;padding:clamp(28px,6vw,72px)}
+  header{display:flex;align-items:center;gap:18px;width:100%;max-width:1080px}
+  header img{height:clamp(40px,6vw,62px)}
+  .lead{max-width:1080px;width:100%;margin:clamp(28px,6vh,56px) 0 clamp(20px,4vh,40px)}
+  .eye{color:var(--gold);font-weight:700;letter-spacing:4px;text-transform:uppercase;font-size:clamp(11px,1.4vw,15px)}
+  h1{font-weight:800;letter-spacing:-1px;font-size:clamp(30px,5.4vw,60px);line-height:1.04;margin-top:10px;
+    background:linear-gradient(180deg,#fff,#FFE2C2);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead p{color:var(--muted);font-size:clamp(15px,1.8vw,20px);margin-top:14px;max-width:60ch}
+  .grid{display:grid;gap:clamp(18px,3vw,28px);width:100%;max-width:1080px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  a.card{display:block;border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;
+    border:1px solid rgba(255,180,90,.18);background:rgba(255,255,255,.02);
+    transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+  a.card:hover{transform:translateY(-6px);border-color:rgba(255,138,69,.5);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .thumb{aspect-ratio:16/9;background-size:cover;background-position:center;position:relative}
+  .thumb.fd{background-image:url("og-card.png")}
+  .thumb.sg{background:linear-gradient(135deg,#0E1626,#05070C);display:flex;align-items:center;justify-content:center}
+  .thumb.sg img{width:62%;filter:drop-shadow(0 8px 24px rgba(0,0,0,.5))}
+  .body{padding:20px 22px 24px}
+  .body .tag{color:var(--orange);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+  .body h2{font-size:clamp(18px,2.4vw,24px);font-weight:800;margin-top:6px}
+  .body span{color:var(--muted);font-size:14px;display:block;margin-top:6px}
+  footer{margin-top:auto;padding-top:clamp(30px,6vh,56px);color:#6E809B;font-size:13px;text-align:center;letter-spacing:.4px}
+  footer b{color:#cfe0f4}
+</style>
+</head>
+<body>
+  <header><img src="brisk-logo.png" alt="Brisk Credit Ltd" /></header>
+
+  <div class="lead">
+    <div class="eye">Brand Screens &amp; Ads</div>
+    <h1>Brisk Credit, on screen.</h1>
+    <p>Animated brand screens for office TVs, signage and the web. Open any one and press <b>F</b> for fullscreen. They loop forever, no internet required once loaded.</p>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="fathers-day.html">
+      <div class="thumb fd"></div>
+      <div class="body">
+        <div class="tag">Seasonal · Father's Day</div>
+        <h2>Happy Father's Day</h2>
+        <span>To every dad building a future for his family.</span>
+      </div>
+    </a>
+    <a class="card" href="signage.html">
+      <div class="thumb sg"><img src="brisk-logo.png" alt="" /></div>
+      <div class="body">
+        <div class="tag">Evergreen · Signage</div>
+        <h2>Office &amp; Branch Screen</h2>
+        <span>Brand promise, impact stats &amp; contact details.</span>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    <b>Brisk Credit Ltd</b> · +254 713 329 268 · Paybill 4106969 · Commodore Suites, Kilimani, Nairobi<br>
+    Regulated by the Central Bank of Kenya.
+  </footer>
+</body>
+</html>

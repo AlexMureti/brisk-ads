@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brisk Credit · Happy Father's Day</title>
+<meta name="description" content="Happy Father's Day from Brisk Credit Ltd — to every dad building a future for his family. Flexible, no-collateral SHABA loans disbursed straight to M-PESA." />
+<link rel="icon" type="image/png" href="favicon.png" />
+<!-- Social share (Open Graph + Twitter). NOTE: update the absolute base URL below to your live GitHub Pages address. -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Brisk Credit Ltd" />
+<meta property="og:title" content="Happy Father's Day — Brisk Credit Ltd" />
+<meta property="og:description" content="To every dad building a future for his family, Brisk Credit celebrates you. Flexible loans, straight to M-PESA." />
+<meta property="og:image" content="https://YOURNAME.github.io/brisk-ads/og-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://YOURNAME.github.io/brisk-ads/fathers-day.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Happy Father's Day — Brisk Credit Ltd" />
+<meta name="twitter:description" content="To every dad building a future for his family, Brisk Credit celebrates you." />
+<meta name="twitter:image" content="https://YOURNAME.github.io/brisk-ads/og-card.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --orange:#FF6A18;
+    --orange-soft:#FF8A45;
+    --gold:#FFB45A;
+    --blue:#229CEF;
+    --blue-2:#1FA0E0;
+    --sky:#6CC8FF;
+    --ink:#06080E;
+    --ink-2:#0B0F1A;
+    --paper:#EAF2FB;
+    --muted:#9FB2CC;
+    --font:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+    --serif:"Playfair Display",Georgia,serif;
+    --slide-hue:24deg;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;overflow:hidden;background:var(--ink);}
+  body{
+    font-family:var(--font);
+    color:var(--paper);
+    cursor:none;
+    user-select:none;
+    position:relative;
+  }
+
+  /* ---------- background layers ---------- */
+  #bg{position:fixed;inset:0;z-index:0;background:
+      radial-gradient(120% 90% at 20% 8%, #1A1206 0%, #0E1018 42%, var(--ink) 70%),
+      linear-gradient(180deg,#0A0905 0%, #05070C 100%);}
+  .aurora{position:fixed;border-radius:50%;filter:blur(86px);opacity:.55;z-index:2;mix-blend-mode:screen;pointer-events:none}
+  .a1{width:48vw;height:48vw;left:-8vw;top:-12vw;background:radial-gradient(circle,var(--orange) 0%,transparent 65%);animation:floatA 34s ease-in-out infinite}
+  .a2{width:50vw;height:50vw;right:-12vw;bottom:-16vw;background:radial-gradient(circle,var(--blue) 0%,transparent 65%);animation:floatB 44s ease-in-out infinite}
+  .a3{width:32vw;height:32vw;left:40vw;top:46vh;background:radial-gradient(circle,var(--gold) 0%,transparent 70%);opacity:.28;animation:floatC 52s ease-in-out infinite}
+  #net{position:fixed;inset:0;z-index:3;pointer-events:none}
+  @keyframes floatA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(6vw,5vh) scale(1.12)}}
+  @keyframes floatB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-5vw,-4vh) scale(1.15)}}
+  @keyframes floatC{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-7vw,3vh) scale(.9)}}
+
+  .vignette{position:fixed;inset:0;z-index:6;pointer-events:none;box-shadow:inset 0 0 28vw rgba(0,0,0,.62);}
+  .grain{position:fixed;inset:-50%;z-index:7;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    animation:grain 1.1s steps(4) infinite;}
+  @keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-4%,3%)}50%{transform:translate(3%,-3%)}75%{transform:translate(-3%,-2%)}100%{transform:translate(2%,3%)}}
+
+  /* ---------- stage ---------- */
+  .stage{position:fixed;inset:0;z-index:5;display:grid;
+    grid-template-columns:1.05fr .95fr;align-items:center;
+    padding:clamp(28px,5vw,90px) clamp(34px,6vw,110px);}
+
+  /* top bar */
+  .top{position:fixed;top:clamp(24px,4vh,52px);left:0;right:0;z-index:8;
+    display:flex;justify-content:space-between;align-items:flex-start;
+    padding:0 clamp(34px,6vw,110px);}
+  .logo{height:clamp(44px,6vh,80px);width:auto;filter:drop-shadow(0 6px 22px rgba(0,0,0,.5));}
+  .clock{text-align:right;line-height:1}
+  .clock .t{font-weight:800;font-size:clamp(26px,4vw,56px);letter-spacing:1px;
+    background:linear-gradient(120deg,#fff 0%,var(--gold) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .clock .d{margin-top:8px;color:var(--muted);font-weight:500;font-size:clamp(11px,1.3vw,17px);letter-spacing:3px;text-transform:uppercase}
+
+  /* occasion ribbon */
+  .occasion{position:fixed;top:clamp(96px,13vh,150px);left:clamp(34px,6vw,110px);z-index:8;
+    display:inline-flex;align-items:center;gap:12px;
+    padding:9px 20px;border-radius:999px;
+    background:linear-gradient(90deg,rgba(255,106,24,.18),rgba(255,180,90,.08));
+    border:1px solid rgba(255,138,69,.4);backdrop-filter:blur(6px);
+    color:var(--gold);font-weight:700;letter-spacing:3px;font-size:clamp(11px,1.2vw,15px);text-transform:uppercase}
+  .occasion .heart{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 14px var(--orange);animation:beat 1.6s ease-in-out infinite}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.5)}}
+
+  /* left: rotating messages */
+  .left{max-width:48vw}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--orange-soft);
+    font-weight:700;font-size:clamp(12px,1.35vw,18px);letter-spacing:5px;text-transform:uppercase}
+  .eyebrow::before{content:"";width:clamp(26px,3vw,52px);height:3px;border-radius:2px;
+    background:linear-gradient(90deg,var(--orange),transparent)}
+  .script{font-family:var(--serif);font-style:italic;font-weight:600;
+    color:var(--gold);font-size:clamp(22px,2.6vw,40px);line-height:1;margin-bottom:6px;
+    text-shadow:0 2px 24px rgba(255,138,69,.35)}
+  .head{margin:clamp(8px,1.4vh,18px) 0 0;font-weight:800;
+    font-size:clamp(38px,6vw,90px);line-height:1.02;letter-spacing:-1.5px;
+    background:linear-gradient(180deg,#FFFFFF 0%, #FFE2C2 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow:0 2px 30px rgba(0,0,0,.25);
+    filter:drop-shadow(0 0 18px hsla(var(--slide-hue),100%,55%,.4));
+    position:relative;z-index:1}
+  .sub{margin-top:clamp(14px,2vh,24px);color:#C9D6E8;font-weight:500;
+    font-size:clamp(16px,1.9vw,27px);line-height:1.45;max-width:32ch}
+  .accent{margin-top:clamp(18px,2.5vh,30px);height:5px;width:0;border-radius:3px;
+    background:linear-gradient(90deg,var(--orange),var(--gold));box-shadow:0 0 24px rgba(255,106,24,.5)}
+
+  .slide{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,.8,.24,1);
+    position:absolute;pointer-events:none}
+  .slide.on{opacity:1;transform:translateY(0);position:relative}
+  .slide.on .accent{width:clamp(90px,11vw,190px);transition:width 1.1s .25s cubic-bezier(.16,.8,.24,1)}
+  .leftwrap{position:relative;min-height:48vh;display:flex;align-items:center}
+
+  /* right: mascot hero — sized by HEIGHT so the full figure always fits */
+  .hero{justify-self:center;position:relative;display:flex;align-items:center;justify-content:center;
+    width:100%;height:100%}
+  /* fixed frame: capped so it never collides with the top bar / contact bar */
+  .heroframe{position:relative;
+    height:min(72vh,920px);
+    width:min(42vw,620px);
+    animation:bob 7s ease-in-out infinite;
+    will-change:transform}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(-1deg)}}
+  .halo{position:absolute;inset:0;margin:auto;width:78%;height:78%;border-radius:50%;filter:blur(48px);
+    background:radial-gradient(circle, rgba(255,106,24,.5) 0%, rgba(255,180,90,.28) 45%, transparent 70%);
+    animation:pulse 7s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(.96);opacity:.8}50%{transform:scale(1.08);opacity:1}}
+  .mascot{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;
+    filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));
+    opacity:0;transition:opacity 1s ease}
+  .mascot.on{opacity:1}
+  .ring{position:absolute;inset:0;margin:auto;width:min(108%,640px);height:min(108%,640px);border-radius:50%;
+    border:1px dashed rgba(255,180,90,.22);animation:spin 60s linear infinite}
+  .ring.r2{width:min(126%,760px);height:min(126%,760px);border-color:rgba(34,156,239,.16);animation-duration:90s;animation-direction:reverse}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* floating gift/heart emojis drifting up */
+  .floaty{position:fixed;z-index:4;pointer-events:none;font-size:clamp(18px,2vw,30px);
+    opacity:0;animation:rise linear infinite;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
+  @keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}
+    10%{opacity:.85}90%{opacity:.85}100%{transform:translateY(-108vh) rotate(40deg);opacity:0}}
+
+  /* bottom contact bar */
+  .bar{position:fixed;left:0;right:0;bottom:0;z-index:8}
+  .bar .line{height:5px;background:linear-gradient(90deg,var(--orange) 0%,var(--gold) 40%,var(--blue) 100%)}
+  .bar .info{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;
+    padding:clamp(12px,1.8vh,20px) clamp(34px,6vw,110px);
+    background:linear-gradient(180deg, rgba(6,8,14,0) 0%, rgba(6,8,14,.82) 60%);}
+  .contact{display:flex;align-items:center;gap:clamp(14px,2.4vw,40px);flex-wrap:wrap;
+    color:#D7E4F5;font-weight:600;font-size:clamp(12px,1.4vw,19px);letter-spacing:.4px}
+  .contact .dot{width:6px;height:6px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px var(--orange)}
+  .contact b{color:#fff}
+  .cbk{color:#6E809B;font-weight:500;font-size:clamp(10px,1.05vw,14px);letter-spacing:.6px;text-align:right}
+
+  .toast{position:fixed;z-index:9;left:50%;bottom:13vh;transform:translateX(-50%);
+    background:rgba(12,17,26,.82);border:1px solid rgba(255,180,90,.3);
+    color:#FFE2C2;padding:10px 20px;border-radius:999px;font-size:14px;letter-spacing:.5px;
+    backdrop-filter:blur(8px);transition:opacity .6s;cursor:pointer}
+  .toast.hide{opacity:0;pointer-events:none}
+
+  /* portrait / square screens (rotated TV, tablets, phones): stack vertically */
+  @media (max-aspect-ratio:1/1){
+    .stage{grid-template-columns:1fr;grid-template-rows:auto auto;justify-items:center;text-align:center;
+      gap:2vh;align-content:center;padding-top:18vh;padding-bottom:14vh}
+    .left{max-width:88vw}.sub{max-width:38ch;margin-inline:auto}
+    .eyebrow{justify-content:center}.leftwrap{min-height:auto;order:2}
+    .hero{order:1;height:auto}
+    .heroframe{height:min(46vh,520px);width:min(70vw,460px)}
+    .occasion{position:static;margin:6px auto 0}
+  }
+  /* short landscape screens: shrink hero so head + feet stay in frame */
+  @media (max-aspect-ratio:16/10) and (min-aspect-ratio:1/1){
+    .heroframe{height:min(66vh,760px)}
+  }
+  /* very wide / large TVs: allow a bigger figure */
+  @media (min-width:2000px){
+    .heroframe{height:min(74vh,1180px);width:min(40vw,760px)}
+  }
+</style>
+</head>
+<body>
+  <div id="bg"></div>
+  <div class="aurora a1"></div>
+  <div class="aurora a2"></div>
+  <div class="aurora a3"></div>
+  <canvas id="net"></canvas>
+
+  <header class="top">
+    <img class="logo" src="brisk-logo.png" alt="Brisk Credit Ltd" />
+    <div class="clock"><div class="t" id="clk">--:--</div><div class="d" id="date">—</div></div>
+  </header>
+
+  <div class="occasion"><span class="heart"></span><span id="occ">Father's Day · Sunday 21 June</span></div>
+
+  <main class="stage">
+    <section class="left">
+      <div class="leftwrap" id="slides"><!-- slides injected --></div>
+    </section>
+    <section class="hero">
+      <div class="heroframe">
+        <div class="ring r2"></div>
+        <div class="ring"></div>
+        <div class="halo"></div>
+        <img class="mascot on" id="m0" src="fd-dad-3.png" alt="A Brisk dad lifting his child" />
+        <img class="mascot"    id="m1" src="fd-dad-2.png" alt="A Brisk dad lifting his child" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="bar">
+    <div class="line"></div>
+    <div class="info">
+      <div class="contact">
+        <span><b>+254 713 329 268</b></span><span class="dot"></span>
+        <span>Lipa na M-PESA · Paybill <b>4106969</b></span><span class="dot"></span>
+        <span>Commodore Suites, Kilimani · Nairobi</span>
+      </div>
+      <div class="cbk">Brisk Credit Ltd is regulated by the Central Bank of Kenya.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Click or press F for fullscreen signage</div>
+
+<script>
+/* ---------------- Father's Day messages ---------------- */
+const SLIDES = [
+  {script:"Happy",     eye:"Father's Day 2026", head:"Father's Day.",            sub:"To every dad building a future for his family — Brisk Credit celebrates you.", pose:0},
+  {script:"For the",   eye:"We see you",         head:"Provider.<br>Protector.",  sub:"The hustle behind every home. Tuliona wewe, baba.", pose:1},
+  {script:"This week", eye:"Father's Day offer", head:"Treat the<br>family.",     sub:"Quick SHABA loans to M-PESA — make this Father's Day one to remember.", pose:0},
+  {script:"No",        eye:"How we lend",        head:"No collateral.<br>Just trust.", sub:"Working capital for dads growing their businesses, their way.", pose:1},
+  {script:"From all",  eye:"Asante, baba",       head:"Thank you,<br>fathers.",   sub:"For the sacrifice, the strength, the love. Brisk Credit has your back.", pose:0},
+];
+const wrap = document.getElementById('slides');
+SLIDES.forEach((s,i)=>{
+  const el=document.createElement('div'); el.className='slide'+(i===0?' on':'');
+  el.innerHTML=`<div class="script">${s.script}</div><span class="eyebrow">${s.eye}</span>`+
+               `<h1 class="head">${s.head}</h1><p class="sub">${s.sub}</p><div class="accent"></div>`;
+  wrap.appendChild(el);
+});
+const slideEls=[...document.querySelectorAll('.slide')];
+const masks=[document.getElementById('m0'),document.getElementById('m1')];
+function setPose(p){ masks.forEach((m,i)=>m.classList.toggle('on',i===p)); }
+let si=0;
+setPose(SLIDES[0].pose);
+setInterval(()=>{
+  slideEls[si].classList.remove('on');
+  si=(si+1)%slideEls.length;
+  slideEls[si].classList.add('on');
+  setPose(SLIDES[si].pose);
+  const hue=20+(si*8);
+  document.documentElement.style.setProperty('--slide-hue',hue+'deg');
+  document.querySelector('.a1').style.opacity='0.78';
+  setTimeout(()=>document.querySelector('.a1').style.opacity='0.55',220);
+},6800);
+
+/* ---------------- live clock + Father's Day countdown ---------------- */
+function nextFathersDay(now){
+  // 3rd Sunday of June
+  function thirdSun(y){const d=new Date(y,5,1);const off=(7-d.getDay())%7;return new Date(y,5,1+off+14);}
+  let y=now.getFullYear(); let d=thirdSun(y);
+  const end=new Date(d); end.setHours(23,59,59);
+  if(now>end){ d=thirdSun(y+1); }
+  return d;
+}
+function tick(){
+  const n=new Date();
+  const hh=String(n.getHours()).padStart(2,'0');
+  const mm=String(n.getMinutes()).padStart(2,'0');
+  document.getElementById('clk').textContent=`${hh}:${mm}`;
+  document.getElementById('date').textContent=
+    n.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+  const fd=nextFathersDay(n);
+  const today=new Date(n.getFullYear(),n.getMonth(),n.getDate());
+  const fdDay=new Date(fd.getFullYear(),fd.getMonth(),fd.getDate());
+  const days=Math.round((fdDay-today)/86400000);
+  const dateStr=fd.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+  let label;
+  if(days===0) label="Father's Day · Today 💛";
+  else if(days===1) label="Father's Day · Tomorrow · "+dateStr;
+  else label="Father's Day · "+dateStr+" · "+days+" days to go";
+  document.getElementById('occ').textContent=label;
+}
+tick(); setInterval(tick,1000*15);
+
+/* ---------------- drifting gifts / hearts ---------------- */
+const EMO=["🎁","💛","👔","🧡","⭐","🤝","🏆"];
+function spawnFloaty(){
+  const s=document.createElement('div'); s.className='floaty';
+  s.textContent=EMO[(Math.random()*EMO.length)|0];
+  s.style.left=(Math.random()*96+2)+'vw';
+  s.style.bottom='-6vh';
+  const dur=14+Math.random()*12;
+  s.style.animationDuration=dur+'s';
+  s.style.fontSize=(16+Math.random()*22)+'px';
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(),dur*1000+500);
+}
+setInterval(spawnFloaty,1700);
+for(let i=0;i<5;i++) setTimeout(spawnFloaty,i*900);
+
+/* ---------------- particle constellation ---------------- */
+const cv=document.getElementById('net'), ctx=cv.getContext('2d');
+let W,H,DPR,nodes=[],orbs=[],time=0;
+const BRAND=[[255,106,24],[255,180,90],[34,156,239]];
+function size(){
+  DPR=Math.min(window.devicePixelRatio||1,2);
+  W=cv.width=innerWidth*DPR; H=cv.height=innerHeight*DPR;
+  cv.style.width=innerWidth+'px'; cv.style.height=innerHeight+'px';
+  const count=Math.round(Math.min(80,Math.max(40,(innerWidth*innerHeight)/24000)));
+  nodes=Array.from({length:count},()=>mk());
+  orbs=Array.from({length:9},()=>mkOrb());
+}
+function mk(){const c=BRAND[(Math.random()*BRAND.length)|0];
+  return{x:Math.random()*W,y:Math.random()*H,
+    vx:(Math.random()-.5)*.18*DPR,vy:(Math.random()-.5)*.18*DPR,
+    r:(Math.random()*1.7+0.7)*DPR,c,tw:Math.random()*Math.PI*2};}
+function mkOrb(){const c=BRAND[(Math.random()*2)|0];
+  return{x:Math.random()*W,y:Math.random()*H+H,r:(Math.random()*60+30)*DPR,
+    vy:-(Math.random()*.25+.08)*DPR,c,a:Math.random()*.06+.02};}
+const LINK=140;
+function frame(){
+  time+=.018;
+  ctx.clearRect(0,0,W,H);
+  for(const o of orbs){
+    o.y+=o.vy; if(o.y<-o.r){o.y=H+o.r;o.x=Math.random()*W;}
+    const g=ctx.createRadialGradient(o.x,o.y,0,o.x,o.y,o.r);
+    g.addColorStop(0,`rgba(${o.c[0]},${o.c[1]},${o.c[2]},${o.a})`);
+    g.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.fillStyle=g; ctx.beginPath(); ctx.arc(o.x,o.y,o.r,0,7); ctx.fill();
+  }
+  for(const n of nodes){
+    n.vx*=.99;n.vy*=.99;n.x+=n.vx;n.y+=n.vy;
+    if(n.x<0||n.x>W)n.vx*=-1; if(n.y<0||n.y>H)n.vy*=-1;
+  }
+  for(let i=0;i<nodes.length;i++){
+    const a=nodes[i];
+    for(let j=i+1;j<nodes.length;j++){
+      const b=nodes[j], dx=a.x-b.x, dy=a.y-b.y, d=Math.hypot(dx,dy);
+      if(d<LINK*DPR){
+        const al=(1-d/(LINK*DPR))*(.25+.06*Math.sin(time+i+j));
+        ctx.strokeStyle=`rgba(${(a.c[0]+b.c[0])/2},${(a.c[1]+b.c[1])/2},${(a.c[2]+b.c[2])/2},${al})`;
+        ctx.lineWidth=DPR*.6;
+        ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+      }
+    }
+  }
+  for(const n of nodes){
+    n.tw+=.04;
+    const a=.5+Math.sin(n.tw)*.35;
+    ctx.fillStyle=`rgba(${n.c[0]},${n.c[1]},${n.c[2]},${a})`;
+    ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,7);ctx.fill();
+  }
+  requestAnimationFrame(frame);
+}
+addEventListener('resize',size); size(); frame();
+
+/* ---------------- fullscreen + toast ---------------- */
+const toast=document.getElementById('toast');
+function goFS(){ const el=document.documentElement;
+  const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen || (()=>{});
+  req.call(el);
+}
+function handleFullscreenKey(event){
+  const key = event.key ? String(event.key).toLowerCase() : '';
+  if (key === 'f'){ event.preventDefault(); goFS(); }
+}
+if (document.body){ document.body.tabIndex=-1; document.body.style.outline='none'; document.body.focus(); }
+window.addEventListener('click',goFS);
+window.addEventListener('keydown',handleFullscreenKey);
+setTimeout(()=>toast.classList.add('hide'),6500);
+document.addEventListener('fullscreenchange',()=>{ if(document.fullscreenElement)toast.classList.add('hide'); });
+</script>
+<div class="vignette"></div>
+<div class="grain"></div>
+</body>
+</html>

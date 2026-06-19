@@ -1,0 +1,5 @@
+_preview_server.js
+*.py
+*.pyc
+.DS_Store
+Thumbs.db

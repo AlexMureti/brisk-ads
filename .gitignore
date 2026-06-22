@@ -3,3 +3,6 @@ _preview_server.js
 *.pyc
 .DS_Store
 Thumbs.db
+
+kilimo-*-raw.png
+_chk_*.png

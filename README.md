@@ -23,10 +23,10 @@ Press **F** on any screen for fullscreen. They loop forever; fonts fall back to 
    ```
 3. On GitHub: **Settings → Pages → Build and deployment → Source: "Deploy from a branch"**, branch **`main`**, folder **`/ (root)`**, then **Save**.
 4. Your site goes live in ~1 minute at:
-   `https://YOURNAME.github.io/brisk-ads/`
+   `https://briskcredit.github.io/brisk-ads/`
 
 ### One thing to update for nice link previews
-The social-share (`og:`) tags in `index.html` and `fathers-day.html` contain a placeholder base URL `https://YOURNAME.github.io/brisk-ads/`. After you know your live URL, find-and-replace **`YOURNAME`** with your GitHub username (and adjust the repo name if you used a different one) so WhatsApp/Facebook/Twitter previews show the Father's Day card.
+The social-share (`og:`) tags in `index.html` and `fathers-day.html` contain a placeholder base URL `https://briskcredit.github.io/brisk-ads/`. After you know your live URL, find-and-replace **`YOURNAME`** with your GitHub username (and adjust the repo name if you used a different one) so WhatsApp/Facebook/Twitter previews show the Father's Day card.
 
 ## Custom domain (optional)
-To serve at e.g. `ads.brisk-credit.co.ke`, add a `CNAME` file containing that hostname and point a DNS CNAME record at `YOURNAME.github.io`.
+To serve at e.g. `ads.brisk-credit.co.ke`, add a `CNAME` file containing that hostname and point a DNS CNAME record at `briskcredit.github.io`.

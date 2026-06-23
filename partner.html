@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brisk Credit · Your Flexible Financial Partner</title>
+<meta name="description" content="Brisk Credit Ltd — your flexible financial partner. Working capital that grows Kenya's businesses. No collateral, straight to M-PESA." />
+<link rel="icon" type="image/png" href="favicon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Brisk Credit Ltd" />
+<meta property="og:title" content="Brisk Credit — Your Flexible Financial Partner" />
+<meta property="og:description" content="Working capital that grows Kenya's businesses. No collateral. Straight to M-PESA." />
+<meta property="og:image" content="https://briskcredit.github.io/brisk-ads/partner-og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://briskcredit.github.io/brisk-ads/partner.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Brisk Credit — Your Flexible Financial Partner" />
+<meta name="twitter:image" content="https://briskcredit.github.io/brisk-ads/partner-og.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --orange:#FF6A18;
+    --orange-soft:#FF8A45;
+    --blue:#229CEF;
+    --sky:#6CC8FF;
+    --ink:#06080E;
+    --paper:#EAF2FB;
+    --muted:#9FB2CC;
+    --font:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;overflow:hidden;background:var(--ink);}
+  body{font-family:var(--font);color:var(--paper);cursor:none;user-select:none;position:relative;}
+
+  /* ---------- background ---------- */
+  #bg{position:fixed;inset:0;z-index:0;background:
+      radial-gradient(120% 90% at 50% 0%, #0E1626 0%, #080C16 50%, var(--ink) 80%),
+      linear-gradient(180deg,#080B14 0%, #05070C 100%);}
+  .aurora{position:fixed;border-radius:50%;filter:blur(64px);opacity:.5;z-index:2;mix-blend-mode:screen;pointer-events:none;will-change:transform}
+  .a1{width:46vw;height:46vw;left:-6vw;top:-12vw;background:radial-gradient(circle,var(--orange) 0%,transparent 65%);animation:floatA 36s ease-in-out infinite}
+  .a2{width:50vw;height:50vw;right:-12vw;bottom:-18vw;background:radial-gradient(circle,var(--blue) 0%,transparent 65%);animation:floatB 46s ease-in-out infinite}
+  .a3{width:30vw;height:30vw;left:38vw;top:54vh;background:radial-gradient(circle,var(--sky) 0%,transparent 70%);opacity:.22;animation:floatC 54s ease-in-out infinite}
+  #net{position:fixed;inset:0;z-index:3;pointer-events:none}
+  @keyframes floatA{0%,100%{transform:translate(0,0)}50%{transform:translate(5vw,5vh)}}
+  @keyframes floatB{0%,100%{transform:translate(0,0)}50%{transform:translate(-5vw,-4vh)}}
+  @keyframes floatC{0%,100%{transform:translate(0,0)}50%{transform:translate(-6vw,3vh)}}
+  .vignette{position:fixed;inset:0;z-index:6;pointer-events:none;box-shadow:inset 0 0 30vw rgba(0,0,0,.6);}
+
+  /* top bar: clock */
+  .clock{position:fixed;top:clamp(22px,3.5vh,46px);right:clamp(30px,5vw,80px);z-index:8;text-align:right;line-height:1}
+  .clock .t{font-weight:800;font-size:clamp(22px,3vw,40px);letter-spacing:1px;
+    background:linear-gradient(120deg,#fff 0%,var(--sky) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .clock .d{margin-top:6px;color:var(--muted);font-weight:500;font-size:clamp(10px,1.1vw,14px);letter-spacing:3px;text-transform:uppercase}
+
+  /* center stage */
+  .stage{position:fixed;inset:0;z-index:5;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;
+    padding:clamp(40px,8vw,120px) clamp(28px,6vw,90px);}
+  .logo{height:clamp(70px,13vh,150px);width:auto;
+    filter:drop-shadow(0 10px 34px rgba(0,0,0,.55));
+    animation:floaty 8s ease-in-out infinite}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  .eyebrow{margin-top:clamp(22px,4vh,46px);color:var(--orange-soft);font-weight:700;
+    letter-spacing:clamp(4px,1vw,9px);text-transform:uppercase;font-size:clamp(11px,1.4vw,17px)}
+  .head{margin-top:clamp(14px,2.4vh,26px);font-weight:800;letter-spacing:-1.5px;line-height:1.03;
+    font-size:clamp(40px,8vw,128px);
+    background:linear-gradient(180deg,#FFFFFF 0%, #CFE0F4 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow:0 2px 40px rgba(0,0,0,.3)}
+  .head .accentword{
+    background:linear-gradient(120deg,var(--orange) 0%, var(--orange-soft) 60%, var(--sky) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;}
+  .accentbar{margin-top:clamp(22px,3.5vh,40px);height:5px;width:clamp(120px,16vw,260px);border-radius:3px;
+    background:linear-gradient(90deg,var(--orange),var(--blue));box-shadow:0 0 26px rgba(255,106,24,.5)}
+  /* rotating subline */
+  .subwrap{position:relative;height:clamp(34px,5vh,56px);margin-top:clamp(22px,3.5vh,40px);width:100%}
+  .sub{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    color:var(--muted);font-weight:500;font-size:clamp(16px,2.1vw,30px);letter-spacing:.3px;
+    opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,.8,.24,1)}
+  .sub.on{opacity:1;transform:translateY(0)}
+
+  /* bottom contact bar */
+  .bar{position:fixed;left:0;right:0;bottom:0;z-index:8}
+  .bar .line{height:5px;background:linear-gradient(90deg,var(--orange) 0%,var(--orange) 32%,var(--blue) 100%)}
+  .bar .info{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;
+    padding:clamp(12px,1.8vh,20px) clamp(34px,6vw,90px);
+    background:linear-gradient(180deg, rgba(6,8,14,0) 0%, rgba(6,8,14,.8) 60%);}
+  .contact{display:flex;align-items:center;gap:clamp(14px,2.4vw,40px);flex-wrap:wrap;
+    color:#D7E4F5;font-weight:600;font-size:clamp(12px,1.4vw,19px);letter-spacing:.4px}
+  .contact .dot{width:6px;height:6px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px var(--orange)}
+  .contact b{color:#fff}
+  .cbk{color:#6E809B;font-weight:500;font-size:clamp(10px,1.05vw,14px);letter-spacing:.6px;text-align:right}
+
+  .toast{position:fixed;z-index:9;left:50%;bottom:13vh;transform:translateX(-50%);
+    background:rgba(12,17,26,.82);border:1px solid rgba(108,200,255,.25);
+    color:#CFE0F4;padding:10px 20px;border-radius:999px;font-size:14px;letter-spacing:.5px;
+    backdrop-filter:blur(8px);transition:opacity .6s;cursor:pointer}
+  .toast.hide{opacity:0;pointer-events:none}
+</style>
+</head>
+<body>
+  <div id="bg"></div>
+  <div class="aurora a1"></div>
+  <div class="aurora a2"></div>
+  <div class="aurora a3"></div>
+  <canvas id="net"></canvas>
+
+  <div class="clock"><div class="t" id="clk">--:--</div><div class="d" id="date">—</div></div>
+
+  <main class="stage">
+    <img class="logo" src="brisk-logo.png" alt="Brisk Credit Ltd" />
+    <div class="eyebrow">Brisk Credit Ltd</div>
+    <h1 class="head">Your <span class="accentword">flexible</span><br>financial partner.</h1>
+    <div class="accentbar"></div>
+    <div class="subwrap" id="subs"><!-- sublines injected --></div>
+  </main>
+
+  <footer class="bar">
+    <div class="line"></div>
+    <div class="info">
+      <div class="contact">
+        <span><b>+254 713 329 268</b></span><span class="dot"></span>
+        <span>Lipa na M-PESA · Paybill <b>4106969</b></span><span class="dot"></span>
+        <span>Commodore Suites, Kilimani · Nairobi</span>
+      </div>
+      <div class="cbk">Brisk Credit Ltd is regulated by the Central Bank of Kenya.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Click or press F for fullscreen signage</div>
+
+<script>
+/* ---------------- rotating sublines ---------------- */
+const LINES = [
+  "Working capital that grows Kenya's businesses.",
+  "No collateral. Just potential.",
+  "SHABA loans — disbursed straight to M-PESA.",
+  "Finance with a human touch. Tuliona wewe.",
+  "The freedom to move with your hustle.",
+];
+const wrap=document.getElementById('subs');
+LINES.forEach((t,i)=>{const el=document.createElement('div');el.className='sub'+(i===0?' on':'');el.textContent=t;wrap.appendChild(el);});
+const subs=[...document.querySelectorAll('.sub')];
+let si=0;
+setInterval(()=>{subs[si].classList.remove('on');si=(si+1)%subs.length;subs[si].classList.add('on');},5200);
+
+/* ---------------- live clock ---------------- */
+function tick(){
+  const n=new Date();
+  const hh=String(n.getHours()).padStart(2,'0');
+  const mm=String(n.getMinutes()).padStart(2,'0');
+  document.getElementById('clk').textContent=`${hh}:${mm}`;
+  document.getElementById('date').textContent=
+    n.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+}
+tick(); setInterval(tick,1000*15);
+
+/* ---------------- subtle particle constellation (perf-optimized) ---------------- */
+const cv=document.getElementById('net'), ctx=cv.getContext('2d');
+let W,H,DPR,nodes=[],time=0;
+const BRAND=[[255,106,24],[34,156,239],[108,200,255]];
+function size(){
+  DPR=Math.min(window.devicePixelRatio||1,1.25);
+  W=cv.width=innerWidth*DPR; H=cv.height=innerHeight*DPR;
+  cv.style.width=innerWidth+'px'; cv.style.height=innerHeight+'px';
+  const count=Math.round(Math.min(50,Math.max(26,(innerWidth*innerHeight)/36000)));
+  nodes=Array.from({length:count},()=>mk());
+}
+function mk(){const c=BRAND[(Math.random()*BRAND.length)|0];
+  return{x:Math.random()*W,y:Math.random()*H,
+    vx:(Math.random()-.5)*.16*DPR,vy:(Math.random()-.5)*.16*DPR,
+    r:(Math.random()*1.7+0.7)*DPR,c,tw:Math.random()*Math.PI*2};}
+const LINK=150; let _last=0;
+function frame(ts){
+  requestAnimationFrame(frame);
+  if(document.hidden) return;
+  if(ts-_last<32) return; _last=ts;
+  time+=.016;
+  ctx.clearRect(0,0,W,H);
+  for(const n of nodes){
+    n.vx*=.99;n.vy*=.99;n.x+=n.vx;n.y+=n.vy;
+    if(n.x<0||n.x>W)n.vx*=-1; if(n.y<0||n.y>H)n.vy*=-1;
+  }
+  for(let i=0;i<nodes.length;i++){
+    const a=nodes[i];
+    for(let j=i+1;j<nodes.length;j++){
+      const b=nodes[j], dx=a.x-b.x, dy=a.y-b.y, d=Math.hypot(dx,dy);
+      if(d<LINK*DPR){
+        const al=(1-d/(LINK*DPR))*.22;
+        ctx.strokeStyle=`rgba(${(a.c[0]+b.c[0])/2},${(a.c[1]+b.c[1])/2},${(a.c[2]+b.c[2])/2},${al})`;
+        ctx.lineWidth=DPR*.6;
+        ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+      }
+    }
+  }
+  for(const n of nodes){
+    n.tw+=.04;const a=.45+Math.sin(n.tw)*.3;
+    ctx.fillStyle=`rgba(${n.c[0]},${n.c[1]},${n.c[2]},${a})`;
+    ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,7);ctx.fill();
+  }
+}
+addEventListener('resize',size); size(); requestAnimationFrame(frame);
+
+/* ---------------- fullscreen + toast ---------------- */
+const toast=document.getElementById('toast');
+function goFS(){ const el=document.documentElement;
+  const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen || (()=>{});
+  req.call(el);
+}
+function handleFullscreenKey(e){ if((e.key||'').toLowerCase()==='f'){e.preventDefault();goFS();} }
+if (document.body){ document.body.tabIndex=-1; document.body.style.outline='none'; document.body.focus(); }
+window.addEventListener('click',goFS);
+window.addEventListener('keydown',handleFullscreenKey);
+setTimeout(()=>toast.classList.add('hide'),6500);
+document.addEventListener('fullscreenchange',()=>{ if(document.fullscreenElement)toast.classList.add('hide'); });
+</script>
+<div class="vignette"></div>
+</body>
+</html>

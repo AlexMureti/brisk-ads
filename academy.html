@@ -3,520 +3,1571 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Brisk Academy · The 5 Cs of Credit &amp; Our Values</title>
-<meta name="description" content="Staff learning screensaver — Brisk Credit core values, African Guarantee Fund (AGF) values, and the 5 Cs of Credit (Character, Capacity, Capital, Collateral, Conditions) applied the Brisk way." />
+<title>Brisk Academy · Credit craft for stronger businesses</title>
+<meta name="description" content="Brisk Academy staff learning broadcast: our values, the AGF standard, and the 5 Cs of Credit applied the Brisk way." />
+<meta name="theme-color" content="#F86818" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brisk Credit Ltd" />
-<meta property="og:title" content="Brisk Academy — The 5 Cs of Credit" />
-<meta property="og:description" content="Know your craft: Brisk values, AGF values and the 5 Cs of lending — Character, Capacity, Capital, Collateral, Conditions." />
-<meta property="og:url" content="https://briskcredit.github.io/brisk-ads/academy.html" />
+<meta property="og:title" content="Brisk Academy · Think like a lender. Build like a partner." />
+<meta property="og:description" content="A bright, practical learning broadcast for confident credit decisions." />
+<meta property="og:url" content="https://alexmureti.github.io/brisk-ads/academy.html" />
+<meta property="og:image" content="https://alexmureti.github.io/brisk-ads/academy-og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="preload" href="academy-hero.webp" as="image" type="image/webp" />
 <style>
-  :root{
-    --orange:#FF6A18; --orange-soft:#FF8A45;
-    --blue:#229CEF;   --sky:#6CC8FF;
-    --green:#37B24D;  --green-soft:#69DB7C;
-    --gold:#FFB45A;
-    --ink:#06080E;    --paper:#EAF2FB;  --muted:#9FB2CC;
-    --font:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
-    --serif:"Playfair Display",Georgia,serif;
-    --accent:var(--orange);          /* recoloured per scene */
-    --accent-soft:var(--orange-soft);
+  :root {
+    --orange: #F86818;
+    --blue: #2098F0;
+    --green: #37B24D;
+    --gold: #FFB45A;
+    --black: #111111;
+    --charcoal: #282828;
+    --white: #FFFFFF;
+    --soft-blue: #ECF8FF;
+    --soft-orange: #FFF1E8;
+    --soft-green: #EAF8ED;
+    --soft-gold: #FFF5DF;
+    --line: #DDE8EE;
+    --accent: var(--orange);
+    --font: "Manrope", "Segoe UI", Arial, sans-serif;
   }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html,body{height:100%;overflow:hidden;background:var(--ink)}
-  body{font-family:var(--font);color:var(--paper);cursor:none;user-select:none;position:relative}
 
-  /* ---------------- background ---------------- */
-  #bg{position:fixed;inset:0;z-index:0;background:
-      radial-gradient(120% 90% at 18% 6%, #0C1626 0%, #0A0F1A 46%, var(--ink) 76%),
-      linear-gradient(180deg,#080C16 0%, #05070C 100%)}
-  .aurora{position:fixed;border-radius:50%;filter:blur(64px);opacity:.42;z-index:2;mix-blend-mode:screen;pointer-events:none;will-change:transform;transition:background 1.2s ease}
-  .a1{width:48vw;height:48vw;left:-8vw;top:-12vw;background:radial-gradient(circle,var(--accent) 0%,transparent 65%);animation:floatA 36s ease-in-out infinite}
-  .a2{width:52vw;height:52vw;right:-12vw;bottom:-16vw;background:radial-gradient(circle,var(--blue) 0%,transparent 65%);animation:floatB 46s ease-in-out infinite}
-  .a3{width:34vw;height:34vw;left:42vw;top:44vh;background:radial-gradient(circle,var(--accent-soft) 0%,transparent 70%);opacity:.2;animation:floatC 54s ease-in-out infinite}
-  @keyframes floatA{0%,100%{transform:translate(0,0)}50%{transform:translate(6vw,5vh)}}
-  @keyframes floatB{0%,100%{transform:translate(0,0)}50%{transform:translate(-5vw,-4vh)}}
-  @keyframes floatC{0%,100%{transform:translate(0,0)}50%{transform:translate(-7vw,3vh)}}
-  #net{position:fixed;inset:0;z-index:3;pointer-events:none}
-  .vignette{position:fixed;inset:0;z-index:6;pointer-events:none;box-shadow:inset 0 0 28vw rgba(0,0,0,.6)}
-  .grain{position:fixed;inset:-50%;z-index:7;pointer-events:none;opacity:.045;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
-
-  /* ---------------- top bar ---------------- */
-  .top{position:fixed;top:clamp(22px,4vh,48px);left:0;right:0;z-index:8;
-    display:flex;justify-content:space-between;align-items:center;
-    padding:0 clamp(34px,6vw,110px)}
-  .brand{display:flex;align-items:baseline;gap:10px;filter:drop-shadow(0 6px 22px rgba(0,0,0,.5))}
-  .wordmark{font-weight:800;font-size:clamp(26px,3.4vw,46px);letter-spacing:-1px;line-height:1;
-    background:linear-gradient(120deg,#fff,var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .wordmark .dot{color:var(--orange);-webkit-text-fill-color:var(--orange)}
-  .tag{font-weight:700;font-size:clamp(9px,1.1vw,13px);letter-spacing:4px;color:var(--muted);text-transform:uppercase}
-  .clock{text-align:right;line-height:1}
-  .clock .t{font-weight:800;font-size:clamp(22px,3vw,42px);letter-spacing:1px;
-    background:linear-gradient(120deg,#fff,var(--accent-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .clock .d{margin-top:7px;color:var(--muted);font-weight:600;font-size:clamp(10px,1.1vw,14px);letter-spacing:3px;text-transform:uppercase}
-
-  /* chapter ribbon */
-  .ribbon{position:fixed;top:clamp(92px,12.5vh,140px);left:clamp(34px,6vw,110px);z-index:8;
-    display:inline-flex;align-items:center;gap:11px;padding:9px 20px;border-radius:999px;
-    background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 22%,transparent),transparent);
-    border:1px solid color-mix(in srgb,var(--accent) 50%,transparent);backdrop-filter:blur(6px);
-    color:var(--accent-soft);font-weight:700;letter-spacing:3px;font-size:clamp(10px,1.15vw,14px);text-transform:uppercase;
-    transition:color 1s,border-color 1s}
-  .ribbon .pip{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent);animation:beat 1.7s ease-in-out infinite}
-  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.5)}}
-
-  /* ---------------- stage / scenes ---------------- */
-  .stage{position:fixed;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;
-    padding:clamp(120px,17vh,190px) clamp(40px,7vw,140px) clamp(96px,13vh,150px)}
-  .scene{position:absolute;width:min(1180px,86vw);opacity:0;visibility:hidden;
-    transition:opacity .7s ease,visibility .7s;will-change:opacity}
-  .scene.on{opacity:1;visibility:visible}
-
-  /* reveal primitive — staggered via --d */
-  .rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,.8,.24,1),transform .8s cubic-bezier(.16,.8,.24,1);transition-delay:var(--d,0s)}
-  .scene.on .rv{opacity:1;transform:none}
-  .rv.s{transform:translateY(0) scale(.86)}
-  .scene.on .rv.s{transform:none}
-
-  .eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--accent-soft);
-    font-weight:700;font-size:clamp(11px,1.3vw,17px);letter-spacing:5px;text-transform:uppercase}
-  .eyebrow::before{content:"";width:clamp(24px,3vw,50px);height:3px;border-radius:2px;background:linear-gradient(90deg,var(--accent),transparent)}
-  .script{font-family:var(--serif);font-style:italic;font-weight:600;color:var(--accent-soft);
-    font-size:clamp(20px,2.5vw,40px);line-height:1.05;text-shadow:0 2px 24px color-mix(in srgb,var(--accent) 35%,transparent)}
-  h1.big{font-weight:800;font-size:clamp(44px,7.6vw,124px);line-height:.98;letter-spacing:-2px;
-    background:linear-gradient(180deg,#fff 0%,#CFE4FA 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
-    filter:drop-shadow(0 0 22px color-mix(in srgb,var(--accent) 40%,transparent))}
-  h2.head{font-weight:800;font-size:clamp(34px,5.2vw,80px);line-height:1.02;letter-spacing:-1.4px;
-    background:linear-gradient(180deg,#fff,#D8E7F7);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .sub{color:#C9D6E8;font-weight:500;font-size:clamp(16px,1.9vw,27px);line-height:1.5;max-width:32ch}
-  .center{text-align:center;display:flex;flex-direction:column;align-items:center;gap:clamp(14px,2.4vh,30px)}
-  .center .sub{margin-inline:auto;max-width:40ch}
-
-  /* core-values chips */
-  .chips{display:flex;flex-wrap:wrap;gap:clamp(12px,1.6vw,22px);justify-content:center;max-width:1000px}
-  .chip{display:inline-flex;align-items:center;gap:14px;padding:clamp(14px,1.8vh,22px) clamp(22px,2.4vw,38px);
-    border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
-    border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);
-    font-weight:700;font-size:clamp(17px,2vw,30px);box-shadow:0 18px 40px rgba(0,0,0,.35)}
-  .chip i{width:clamp(10px,1.2vw,15px);height:clamp(10px,1.2vw,15px);border-radius:50%;flex:none}
-
-  /* value / C card grid */
-  .grid{display:grid;gap:clamp(14px,1.6vw,22px);width:100%}
-  .grid.g5{grid-template-columns:repeat(5,1fr)}
-  .grid.g3{grid-template-columns:repeat(3,1fr)}
-  .card{position:relative;border-radius:22px;padding:clamp(18px,2.4vh,30px) clamp(16px,1.6vw,24px);
-    background:linear-gradient(165deg,rgba(255,255,255,.08),rgba(255,255,255,.015));
-    border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(7px);
-    box-shadow:0 24px 50px rgba(0,0,0,.4);overflow:hidden;text-align:left}
-  .card::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--c,var(--accent)),transparent)}
-  .card .ico{width:clamp(40px,4vw,58px);height:clamp(40px,4vw,58px);margin-bottom:14px}
-  .card .ico svg{width:100%;height:100%}
-  .card h3{font-weight:800;font-size:clamp(17px,1.7vw,25px);letter-spacing:-.3px;color:#fff;margin-bottom:7px}
-  .card p{color:#B9C8DE;font-weight:500;font-size:clamp(12px,1.05vw,16px);line-height:1.42}
-  .card .num{font-weight:800;font-size:clamp(20px,2vw,30px);color:var(--c,var(--accent));margin-top:10px}
-
-  /* big single-C detail scene */
-  .clayout{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,72px);align-items:center;width:100%}
-  .cmark{position:relative;display:flex;align-items:center;justify-content:center}
-  .cletter{font-weight:800;font-size:clamp(150px,26vw,400px);line-height:.8;letter-spacing:-8px;
-    background:linear-gradient(160deg,var(--c) 0%,#fff 130%);-webkit-background-clip:text;background-clip:text;color:transparent;
-    filter:drop-shadow(0 0 40px color-mix(in srgb,var(--c) 55%,transparent))}
-  .cbadge{position:absolute;right:6%;bottom:8%;width:clamp(60px,8vw,120px);height:clamp(60px,8vw,120px);
-    border-radius:24px;background:linear-gradient(160deg,color-mix(in srgb,var(--c) 30%,transparent),transparent);
-    border:1px solid color-mix(in srgb,var(--c) 55%,transparent);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
-  .cbadge svg{width:60%;height:60%}
-
-  /* 3D hero object */
-  .cobj{position:relative;width:min(42vw,540px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;margin:auto}
-  .cobj .obj{position:relative;z-index:3;width:100%;height:100%;object-fit:contain;
-    filter:drop-shadow(0 36px 60px rgba(0,0,0,.65));
-    -webkit-mask-image:radial-gradient(circle at 50% 48%, #000 60%, transparent 76%);
-    mask-image:radial-gradient(circle at 50% 48%, #000 60%, transparent 76%);
-    animation:bob 7s ease-in-out infinite;will-change:transform}
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
-  .cobj .halo{position:absolute;z-index:1;inset:0;margin:auto;width:80%;height:80%;border-radius:50%;filter:blur(54px);
-    background:radial-gradient(circle,color-mix(in srgb,var(--c) 60%,transparent) 0%,transparent 68%);animation:pulse 7s ease-in-out infinite}
-  @keyframes pulse{0%,100%{transform:scale(.94);opacity:.75}50%{transform:scale(1.08);opacity:1}}
-  .cobj .ghost{position:absolute;z-index:2;font-weight:800;font-size:min(46vw,560px);line-height:1;color:var(--c);opacity:.07;
-    pointer-events:none;user-select:none}
-  .cobj .ring{position:absolute;z-index:1;inset:0;margin:auto;width:104%;height:104%;border-radius:50%;
-    border:1px dashed color-mix(in srgb,var(--c) 40%,transparent);animation:spin 60s linear infinite}
-  .cobj .ring.r2{width:122%;height:122%;border-color:color-mix(in srgb,var(--c) 22%,transparent);animation-duration:90s;animation-direction:reverse}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .cstep{color:var(--c);font-weight:800;letter-spacing:4px;font-size:clamp(12px,1.3vw,17px);text-transform:uppercase}
-  .cright h2{font-weight:800;font-size:clamp(40px,5.6vw,86px);line-height:1;letter-spacing:-1.6px;margin:6px 0 14px;
-    background:linear-gradient(180deg,#fff,#D8E7F7);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .cdef{color:#CCDAEC;font-weight:500;font-size:clamp(16px,1.9vw,27px);line-height:1.45;max-width:30ch;margin-bottom:clamp(16px,2.4vh,26px)}
-  .briskway{position:relative;padding:clamp(14px,2vh,20px) clamp(18px,1.8vw,26px) clamp(14px,2vh,20px) clamp(26px,2.6vw,38px);
-    border-radius:16px;background:linear-gradient(120deg,color-mix(in srgb,var(--c) 14%,transparent),rgba(255,255,255,.02));
-    border:1px solid color-mix(in srgb,var(--c) 30%,transparent);max-width:40ch}
-  .briskway::before{content:"";position:absolute;left:0;top:14%;bottom:14%;width:5px;border-radius:3px;background:var(--c);box-shadow:0 0 18px var(--c)}
-  .briskway .lab{display:flex;align-items:center;gap:9px;color:var(--c);font-weight:800;letter-spacing:2px;font-size:clamp(11px,1.15vw,15px);text-transform:uppercase;margin-bottom:7px}
-  .briskway p{color:#DCE7F4;font-weight:500;font-size:clamp(14px,1.45vw,21px);line-height:1.4}
-
-  /* object thumbnail row (overview) */
-  .objrow{display:flex;gap:clamp(8px,1.4vw,26px);justify-content:center;flex-wrap:wrap;margin:1.4vh 0 .4vh}
-  .othumb{display:flex;flex-direction:column;align-items:center;gap:6px;width:clamp(108px,14vw,180px)}
-  .othumb .otimg{position:relative;width:100%;aspect-ratio:1}
-  .othumb .otimg img{position:relative;z-index:2;width:100%;height:100%;object-fit:contain;
-    -webkit-mask-image:radial-gradient(circle at 50% 48%,#000 58%,transparent 75%);mask-image:radial-gradient(circle at 50% 48%,#000 58%,transparent 75%);
-    filter:drop-shadow(0 16px 26px rgba(0,0,0,.6));animation:bob 7s ease-in-out infinite}
-  .othumb:nth-child(2) .otimg img{animation-delay:-1.2s}
-  .othumb:nth-child(3) .otimg img{animation-delay:-2.4s}
-  .othumb:nth-child(4) .otimg img{animation-delay:-3.6s}
-  .othumb:nth-child(5) .otimg img{animation-delay:-4.8s}
-  .othumb .othalo{position:absolute;z-index:1;inset:0;margin:auto;width:74%;height:74%;border-radius:50%;filter:blur(26px);
-    background:radial-gradient(circle,color-mix(in srgb,var(--c) 55%,transparent),transparent 70%)}
-  .othumb span{font-weight:700;font-size:clamp(12px,1.3vw,18px);color:#D7E4F5}
-
-  /* draw-in svg strokes */
-  .draw{stroke-dasharray:600;stroke-dashoffset:600;transition:stroke-dashoffset 1.5s ease .25s}
-  .scene.on .draw{stroke-dashoffset:0}
-
-  /* progress dots */
-  .dots{position:fixed;left:50%;transform:translateX(-50%);bottom:clamp(86px,12vh,120px);z-index:8;
-    display:flex;gap:9px}
-  .dots b{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.18);transition:all .5s}
-  .dots b.on{width:26px;border-radius:5px;background:var(--accent);box-shadow:0 0 14px var(--accent)}
-
-  /* top progress bar */
-  #prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:9;
-    background:linear-gradient(90deg,var(--accent),var(--accent-soft));box-shadow:0 0 12px var(--accent)}
-
-  /* ---------------- footer ---------------- */
-  .bar{position:fixed;left:0;right:0;bottom:0;z-index:8}
-  .bar .line{height:5px;background:linear-gradient(90deg,var(--orange) 0%,var(--gold) 40%,var(--blue) 100%)}
-  .bar .info{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;
-    padding:clamp(11px,1.7vh,18px) clamp(34px,6vw,110px);
-    background:linear-gradient(180deg,rgba(6,8,14,0),rgba(6,8,14,.82) 60%)}
-  .contact{display:flex;align-items:center;gap:clamp(12px,2.2vw,36px);flex-wrap:wrap;
-    color:#D7E4F5;font-weight:600;font-size:clamp(11px,1.3vw,18px);letter-spacing:.4px}
-  .contact .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
-  .contact b{color:#fff}
-  .cbk{color:#6E809B;font-weight:500;font-size:clamp(10px,1vw,13px);letter-spacing:.6px;text-align:right}
-
-  .toast{position:fixed;z-index:9;left:50%;bottom:14vh;transform:translateX(-50%);
-    background:rgba(12,17,26,.82);border:1px solid rgba(255,255,255,.18);color:#DCE7F4;
-    padding:10px 20px;border-radius:999px;font-size:14px;letter-spacing:.5px;backdrop-filter:blur(8px);transition:opacity .6s}
-  .toast.hide{opacity:0;pointer-events:none}
-
-  /* portrait / narrow */
-  @media (max-aspect-ratio:1/1){
-    .clayout{grid-template-columns:1fr;gap:2vh;text-align:center;justify-items:center}
-    .cright h2{margin-inline:auto}.cdef,.briskway{margin-inline:auto}
-    .grid.g5{grid-template-columns:repeat(2,1fr)}
-    .cletter{font-size:clamp(120px,40vw,260px)}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  @media (max-width:760px){ .grid.g5,.grid.g3{grid-template-columns:1fr 1fr} .scene{width:90vw} }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--white);
+  }
+
+  body {
+    color: var(--black);
+    font-family: var(--font);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  button,
+  a {
+    font: inherit;
+  }
+
+  button {
+    color: inherit;
+  }
+
+  .top-progress {
+    position: fixed;
+    inset: 0 auto auto 0;
+    z-index: 40;
+    width: 0;
+    height: 5px;
+    background: var(--accent);
+    transition: background-color 420ms ease;
+  }
+
+  .chrome {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 30;
+    height: 86px;
+    display: grid;
+    grid-template-columns: minmax(230px, 1fr) auto minmax(230px, 1fr);
+    align-items: center;
+    gap: 24px;
+    padding: 0 clamp(24px, 4vw, 72px);
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none;
+  }
+
+  .brand img {
+    display: block;
+    width: clamp(154px, 13vw, 205px);
+    height: auto;
+  }
+
+  .module {
+    min-width: 0;
+    text-align: center;
+  }
+
+  .module strong {
+    display: block;
+    font-size: clamp(13px, 1.15vw, 17px);
+    font-weight: 800;
+    letter-spacing: .055em;
+  }
+
+  .module span {
+    display: block;
+    margin-top: 4px;
+    color: #555;
+    font-size: clamp(10px, .9vw, 13px);
+    font-weight: 600;
+  }
+
+  .tools {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .clock {
+    min-width: 76px;
+    margin-right: 4px;
+    text-align: right;
+  }
+
+  .clock strong {
+    display: block;
+    font-size: 17px;
+    line-height: 1;
+  }
+
+  .clock span {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .tool-button {
+    min-width: 74px;
+    padding: 9px 12px;
+    border: 1px solid var(--black);
+    border-radius: 999px;
+    background: var(--white);
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 800;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+  }
+
+  .tool-button:hover,
+  .tool-button:focus-visible {
+    background: var(--black);
+    color: var(--white);
+    outline: none;
+    transform: translateY(-1px);
+  }
+
+  .stage {
+    position: fixed;
+    inset: 86px 0 76px;
+    overflow: hidden;
+    background: var(--white);
+  }
+
+  .scene {
+    --scene-bg: var(--white);
+    --scene-ink: var(--black);
+    --scene-accent: var(--orange);
+    position: absolute;
+    inset: 0;
+    visibility: hidden;
+    overflow: hidden;
+    background: var(--scene-bg);
+    color: var(--scene-ink);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(32px);
+    transition:
+      opacity 520ms cubic-bezier(.22, .8, .24, 1),
+      transform 520ms cubic-bezier(.22, .8, .24, 1),
+      visibility 520ms;
+  }
+
+  .scene.is-active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .scene-frame {
+    position: relative;
+    z-index: 2;
+    width: min(1480px, calc(100vw - clamp(48px, 8vw, 152px)));
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .scene h1,
+  .scene h2,
+  .scene h3 {
+    text-wrap: balance;
+  }
+
+  .scene p {
+    text-wrap: pretty;
+  }
+
+  .scene-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: var(--black);
+    color: var(--white);
+    font-size: clamp(10px, .9vw, 13px);
+    font-weight: 800;
+  }
+
+  .scene-kicker i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--scene-accent);
+  }
+
+  .display {
+    font-size: clamp(48px, 6.2vw, 94px);
+    font-weight: 800;
+    letter-spacing: -.035em;
+    line-height: .98;
+  }
+
+  .lead {
+    max-width: 58ch;
+    font-size: clamp(17px, 1.55vw, 25px);
+    font-weight: 500;
+    line-height: 1.48;
+  }
+
+  .hero {
+    background: var(--white);
+  }
+
+  .hero-media {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 3;
+    width: min(660px, 46vw);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(18px, 2.4vh, 30px);
+  }
+
+  .hero-copy .display {
+    max-width: 10ch;
+  }
+
+  .hero-copy .lead {
+    max-width: 41ch;
+    color: #383838;
+  }
+
+  .hero-signals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  .hero-signals span {
+    padding: 8px 12px;
+    border: 1px solid var(--black);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .88);
+    font-size: clamp(10px, .84vw, 12px);
+    font-weight: 800;
+  }
+
+  .vision-frame {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+    align-items: center;
+    gap: clamp(28px, 5vw, 86px);
+  }
+
+  .vision-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(18px, 2.8vh, 34px);
+  }
+
+  .vision-copy .display {
+    max-width: 12ch;
+  }
+
+  .mission {
+    max-width: 620px;
+    padding: clamp(18px, 2vw, 28px);
+    border-radius: 14px;
+    background: var(--white);
+    color: var(--black);
+  }
+
+  .mission strong {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--orange);
+    font-size: 14px;
+  }
+
+  .mission p {
+    font-size: clamp(16px, 1.35vw, 21px);
+    font-weight: 650;
+    line-height: 1.42;
+  }
+
+  .africa-stage {
+    position: relative;
+    height: min(66vh, 650px);
+    display: grid;
+    place-items: center;
+  }
+
+  .africa-stage::before {
+    position: absolute;
+    width: min(35vw, 520px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--white);
+    content: "";
+  }
+
+  .africa-stage::after {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    width: 38%;
+    height: 15%;
+    border-radius: 999px;
+    background: var(--orange);
+    content: "";
+  }
+
+  .africa-stage img {
+    position: relative;
+    z-index: 2;
+    width: min(31vw, 480px);
+    max-height: 62vh;
+    object-fit: contain;
+  }
+
+  .values-frame {
+    display: grid;
+    grid-template-columns: minmax(290px, .66fr) minmax(0, 1.34fr);
+    align-items: center;
+    gap: clamp(36px, 6vw, 110px);
+  }
+
+  .values-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .values-intro p {
+    max-width: 30ch;
+    font-size: clamp(17px, 1.45vw, 23px);
+    font-weight: 650;
+    line-height: 1.45;
+  }
+
+  .value-stack {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 1vh, 12px);
+  }
+
+  .value-word {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: clamp(29px, 4.1vw, 66px);
+    font-weight: 800;
+    letter-spacing: -.035em;
+    line-height: 1.05;
+  }
+
+  .value-word::before {
+    flex: 0 0 auto;
+    width: clamp(16px, 1.8vw, 28px);
+    height: clamp(16px, 1.8vw, 28px);
+    border-radius: 50%;
+    background: var(--dot);
+    content: "";
+  }
+
+  .value-word:nth-child(2) {
+    margin-left: 9%;
+  }
+
+  .value-word:nth-child(3) {
+    margin-left: 18%;
+  }
+
+  .value-word:nth-child(4) {
+    margin-left: 8%;
+  }
+
+  .value-word:nth-child(5) {
+    margin-left: 24%;
+  }
+
+  .partner-frame {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(350px, .92fr);
+    align-items: center;
+    gap: clamp(40px, 6vw, 100px);
+  }
+
+  .partner-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(18px, 2.6vh, 32px);
+  }
+
+  .partner-copy .display {
+    max-width: 11ch;
+  }
+
+  .partner-copy .lead {
+    max-width: 43ch;
+    color: #3B3B3B;
+  }
+
+  .agf-mark {
+    position: relative;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--black);
+  }
+
+  .agf-mark strong {
+    font-size: clamp(90px, 13vw, 210px);
+    font-weight: 800;
+    letter-spacing: -.07em;
+  }
+
+  .agf-mark span {
+    position: absolute;
+    right: -3%;
+    bottom: 8%;
+    max-width: 190px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: var(--orange);
+    font-size: clamp(12px, 1vw, 15px);
+    font-weight: 800;
+    line-height: 1.35;
+  }
+
+  .agf-values-frame {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    padding-block: clamp(32px, 5vh, 68px);
+  }
+
+  .agf-values-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: clamp(24px, 4vh, 46px);
+  }
+
+  .agf-values-head h2 {
+    max-width: 11ch;
+    font-size: clamp(38px, 5.1vw, 78px);
+    font-weight: 800;
+    letter-spacing: -.035em;
+    line-height: 1;
+  }
+
+  .agf-values-head p {
+    max-width: 35ch;
+    font-size: clamp(15px, 1.25vw, 19px);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .standards {
+    border-top: 2px solid var(--black);
+  }
+
+  .standard-row {
+    display: grid;
+    grid-template-columns: 64px minmax(220px, .7fr) minmax(0, 1.3fr);
+    align-items: center;
+    gap: clamp(18px, 3vw, 48px);
+    min-height: clamp(66px, 8.5vh, 96px);
+    border-bottom: 1px solid rgba(17, 17, 17, .42);
+  }
+
+  .standard-row b {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--row-color);
+    font-size: 13px;
+  }
+
+  .standard-row h3 {
+    font-size: clamp(18px, 1.55vw, 25px);
+    font-weight: 800;
+  }
+
+  .standard-row p {
+    max-width: 70ch;
+    font-size: clamp(13px, 1.05vw, 17px);
+    font-weight: 600;
+    line-height: 1.42;
+  }
+
+  .lens-frame {
+    display: grid;
+    grid-template-columns: minmax(300px, .65fr) minmax(0, 1.35fr);
+    align-items: center;
+    gap: clamp(44px, 7vw, 120px);
+  }
+
+  .lens-number {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: min(34vw, 490px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--orange);
+  }
+
+  .lens-number strong {
+    font-size: clamp(160px, 25vw, 380px);
+    font-weight: 800;
+    letter-spacing: -.09em;
+    line-height: .8;
+  }
+
+  .lens-number span {
+    position: absolute;
+    right: -5%;
+    bottom: 9%;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: var(--black);
+    color: var(--white);
+    font-size: clamp(12px, 1vw, 15px);
+    font-weight: 800;
+  }
+
+  .lens-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(18px, 2.4vh, 30px);
+  }
+
+  .lens-copy .display {
+    max-width: 10ch;
+  }
+
+  .lens-track {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+  }
+
+  .lens-track span {
+    min-width: 0;
+    padding: clamp(12px, 1.5vw, 20px) 8px;
+    border-right: 1px solid rgba(17, 17, 17, .35);
+    font-size: clamp(10px, .88vw, 13px);
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .lens-track span:last-child {
+    border-right: 0;
+  }
+
+  .credit-frame {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(390px, .82fr);
+    align-items: center;
+    gap: clamp(38px, 6vw, 100px);
+  }
+
+  .credit-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(14px, 2vh, 24px);
+  }
+
+  .credit-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: clamp(13px, 1.1vw, 17px);
+    font-weight: 800;
+  }
+
+  .credit-step b {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--scene-accent);
+  }
+
+  .credit-title {
+    font-size: clamp(48px, 6vw, 92px);
+    font-weight: 800;
+    letter-spacing: -.038em;
+    line-height: .95;
+  }
+
+  .credit-definition {
+    max-width: 39ch;
+    font-size: clamp(20px, 1.75vw, 28px);
+    font-weight: 650;
+    line-height: 1.38;
+  }
+
+  .brisk-way {
+    max-width: 660px;
+    padding: clamp(18px, 2vw, 26px);
+    border-radius: 14px;
+    background: var(--black);
+    color: var(--white);
+  }
+
+  .brisk-way strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--scene-accent);
+    font-size: 13px;
+  }
+
+  .brisk-way p {
+    font-size: clamp(14px, 1.18vw, 18px);
+    font-weight: 600;
+    line-height: 1.48;
+  }
+
+  .field-signal {
+    color: var(--black);
+    font-size: clamp(14px, 1.25vw, 19px);
+    font-weight: 800;
+  }
+
+  .credit-visual {
+    position: relative;
+    min-height: min(63vh, 650px);
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--black);
+  }
+
+  .credit-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: min(63vh, 650px);
+    display: block;
+    object-fit: cover;
+  }
+
+  .credit-visual figcaption {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    max-width: 250px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background: var(--scene-accent);
+    color: var(--black);
+    font-size: clamp(11px, .9vw, 14px);
+    font-weight: 800;
+    line-height: 1.35;
+  }
+
+  .final-frame {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(360px, .88fr);
+    align-items: center;
+    gap: clamp(32px, 5vw, 82px);
+  }
+
+  .final-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(18px, 2.5vh, 30px);
+  }
+
+  .final-copy .display {
+    max-width: 10ch;
+  }
+
+  .final-copy .lead {
+    max-width: 43ch;
+    color: #383838;
+  }
+
+  .final-orbit {
+    position: relative;
+    height: min(64vh, 650px);
+  }
+
+  .final-orbit span {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--black);
+    font-weight: 800;
+  }
+
+  .final-orbit span:nth-child(1) {
+    top: 5%;
+    left: 18%;
+    width: 34%;
+    aspect-ratio: 1;
+    background: var(--blue);
+    font-size: clamp(38px, 5vw, 76px);
+  }
+
+  .final-orbit span:nth-child(2) {
+    top: 27%;
+    right: 3%;
+    width: 39%;
+    aspect-ratio: 1;
+    background: var(--orange);
+    font-size: clamp(42px, 5.6vw, 84px);
+  }
+
+  .final-orbit span:nth-child(3) {
+    bottom: 4%;
+    right: 18%;
+    width: 29%;
+    aspect-ratio: 1;
+    background: var(--green);
+    font-size: clamp(32px, 4.4vw, 68px);
+  }
+
+  .final-orbit span:nth-child(4) {
+    bottom: 14%;
+    left: 3%;
+    width: 35%;
+    aspect-ratio: 1;
+    background: var(--gold);
+    font-size: clamp(36px, 4.9vw, 74px);
+  }
+
+  .final-orbit span:nth-child(5) {
+    top: 38%;
+    left: 31%;
+    z-index: 2;
+    width: 26%;
+    aspect-ratio: 1;
+    background: var(--white);
+    border: 3px solid var(--black);
+    font-size: clamp(28px, 3.8vw, 58px);
+  }
+
+  .footer {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 30;
+    height: 76px;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) auto minmax(300px, 1fr);
+    align-items: center;
+    gap: 24px;
+    padding: 0 clamp(24px, 4vw, 72px);
+    background: var(--black);
+    color: var(--white);
+  }
+
+  .footer::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 9px;
+    background: var(--accent);
+    content: "";
+    transition: background-color 420ms ease;
+  }
+
+  .footer-status strong {
+    display: block;
+    font-size: 13px;
+  }
+
+  .footer-status span {
+    display: block;
+    margin-top: 3px;
+    color: #C8C8C8;
+    font-size: 10px;
+    font-weight: 650;
+  }
+
+  .progress-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+  }
+
+  .progress-nav button {
+    width: 48px;
+    height: 7px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 999px;
+    background: #666;
+    color: transparent;
+    cursor: pointer;
+    transform: scaleX(.5);
+    transition: transform 220ms ease, background-color 220ms ease;
+  }
+
+  .progress-nav button.is-active {
+    background: var(--dot);
+    transform: scaleX(1);
+  }
+
+  .progress-nav button:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 4px;
+  }
+
+  .footer-contact {
+    color: #D7D7D7;
+    font-size: clamp(9px, .72vw, 11px);
+    font-weight: 650;
+    line-height: 1.45;
+    text-align: right;
+  }
+
+  .footer-contact b {
+    color: var(--white);
+  }
+
+  .scene.is-active .scene-kicker,
+  .scene.is-active .display,
+  .scene.is-active .lead,
+  .scene.is-active .hero-signals,
+  .scene.is-active .mission,
+  .scene.is-active .value-stack,
+  .scene.is-active .agf-mark,
+  .scene.is-active .standards,
+  .scene.is-active .lens-number,
+  .scene.is-active .lens-track,
+  .scene.is-active .credit-visual,
+  .scene.is-active .brisk-way,
+  .scene.is-active .final-orbit {
+    animation: enter 680ms cubic-bezier(.16, .84, .24, 1) both;
+  }
+
+  .scene.is-active .display,
+  .scene.is-active .mission,
+  .scene.is-active .value-stack,
+  .scene.is-active .standards,
+  .scene.is-active .lens-track,
+  .scene.is-active .brisk-way,
+  .scene.is-active .final-orbit {
+    animation-delay: 110ms;
+  }
+
+  .scene.is-active .lead,
+  .scene.is-active .hero-signals,
+  .scene.is-active .credit-visual {
+    animation-delay: 220ms;
+  }
+
+  @keyframes enter {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (max-width: 1000px), (max-aspect-ratio: 4/3) {
+    .chrome {
+      grid-template-columns: 1fr auto;
+    }
+
+    .module {
+      display: none;
+    }
+
+    .stage {
+      bottom: 70px;
+    }
+
+    .footer {
+      height: 70px;
+      grid-template-columns: 1fr auto;
+    }
+
+    .footer-contact {
+      display: none;
+    }
+
+    .scene-frame {
+      width: min(92vw, 760px);
+    }
+
+    .hero-media img {
+      object-position: 64% center;
+      opacity: .36;
+    }
+
+    .hero-copy {
+      width: 92%;
+    }
+
+    .vision-frame,
+    .values-frame,
+    .partner-frame,
+    .lens-frame,
+    .credit-frame,
+    .final-frame {
+      grid-template-columns: 1fr;
+      align-content: center;
+      gap: 28px;
+      padding-block: 28px;
+    }
+
+    .africa-stage,
+    .agf-mark,
+    .lens-number,
+    .credit-visual,
+    .final-orbit {
+      display: none;
+    }
+
+    .value-word:nth-child(n) {
+      margin-left: 0;
+    }
+
+    .agf-values-head {
+      align-items: start;
+      flex-direction: column;
+      margin-bottom: 18px;
+    }
+
+    .standard-row {
+      grid-template-columns: 44px minmax(150px, .7fr) minmax(0, 1.3fr);
+      min-height: 58px;
+    }
+
+    .lens-track {
+      grid-template-columns: 1fr;
+    }
+
+    .lens-track span {
+      border-right: 0;
+      border-bottom: 1px solid rgba(17, 17, 17, .28);
+      text-align: left;
+    }
+
+    .lens-track span:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .chrome {
+      height: 72px;
+      padding-inline: 18px;
+    }
+
+    .brand img {
+      width: 140px;
+    }
+
+    .clock,
+    #fullscreenButton {
+      display: none;
+    }
+
+    .stage {
+      inset: 72px 0 62px;
+    }
+
+    .footer {
+      height: 62px;
+      grid-template-columns: 1fr;
+      padding-inline: 18px;
+    }
+
+    .footer-status {
+      display: none;
+    }
+
+    .progress-nav {
+      gap: 4px;
+    }
+
+    .progress-nav button {
+      width: 22px;
+      height: 6px;
+      transform: scaleX(.5);
+    }
+
+    .progress-nav button.is-active {
+      transform: scaleX(1);
+    }
+
+    .display {
+      font-size: clamp(40px, 13vw, 66px);
+    }
+
+    .lead {
+      font-size: 16px;
+    }
+
+    .standard-row {
+      grid-template-columns: 38px 1fr;
+      gap: 10px;
+    }
+
+    .standard-row p {
+      display: none;
+    }
+
+    .credit-title {
+      font-size: clamp(44px, 14vw, 68px);
+    }
+
+    .credit-definition {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-height: 720px) and (min-width: 1001px) {
+    .chrome {
+      height: 72px;
+    }
+
+    .stage {
+      inset: 72px 0 64px;
+    }
+
+    .footer {
+      height: 64px;
+    }
+
+    .credit-visual,
+    .credit-visual img {
+      min-height: 56vh;
+    }
+
+    .scene-frame {
+      width: min(1400px, 91vw);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+    }
+  }
 </style>
 </head>
 <body>
-  <div id="bg"></div>
-  <div class="aurora a1"></div>
-  <div class="aurora a2"></div>
-  <div class="aurora a3"></div>
-  <canvas id="net"></canvas>
-  <div id="prog"></div>
+  <div class="top-progress" id="topProgress" aria-hidden="true"></div>
 
-  <header class="top">
-    <div class="brand">
-      <span class="wordmark">brisk<span class="dot">.</span></span>
-      <span class="tag">Academy</span>
+  <header class="chrome">
+    <a class="brand" href="index.html" aria-label="Brisk Credit screens home">
+      <img src="brisk-logo.png" alt="Brisk Credit Ltd" />
+    </a>
+
+    <div class="module">
+      <strong>BRISK ACADEMY</strong>
+      <span id="moduleName">Credit craft · Module 01</span>
     </div>
-    <div class="clock"><div class="t" id="clk">--:--</div><div class="d" id="date">—</div></div>
+
+    <div class="tools">
+      <div class="clock" aria-label="Current time and date">
+        <strong id="clockTime">--:--</strong>
+        <span id="clockDate">—</span>
+      </div>
+      <button class="tool-button" id="pauseButton" type="button" aria-pressed="false">Pause</button>
+      <button class="tool-button" id="fullscreenButton" type="button">Fullscreen</button>
+    </div>
   </header>
 
-  <div class="ribbon"><span class="pip"></span><span id="chapter">Know your craft</span></div>
+  <main class="stage" id="stage" aria-live="polite"></main>
 
-  <main class="stage" id="stage"><!-- scenes injected --></main>
+  <footer class="footer">
+    <div class="footer-status">
+      <strong id="chapterName">Start here</strong>
+      <span><b id="sceneCount">01 / 12</b> · Arrow keys to explore · Space to pause</span>
+    </div>
 
-  <div class="dots" id="dots"></div>
+    <nav class="progress-nav" id="progressNav" aria-label="Academy scenes"></nav>
 
-  <footer class="bar">
-    <div class="line"></div>
-    <div class="info">
-      <div class="contact">
-        <span><b>+254 713 329 268</b></span><span class="dot"></span>
-        <span>Lipa na M-PESA · Paybill <b>4106969</b></span><span class="dot"></span>
-        <span>Commodore Suites, Kilimani · Nairobi</span>
-      </div>
-      <div class="cbk">Brisk Credit Ltd is regulated by the Central Bank of Kenya.</div>
+    <div class="footer-contact">
+      <b>+254 713 329 268</b> · Paybill <b>4106969</b><br />
+      Central Bank of Kenya regulated
     </div>
   </footer>
 
-  <div class="toast" id="toast">Click or press F for fullscreen signage</div>
-
 <script>
-/* ============================================================
-   ICONS — inline line-art (stroke uses currentColor)
-   ============================================================ */
-const I = {
-  shieldCheck:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path class="draw" d="M32 6 54 14v16c0 14-9 24-22 28C19 54 10 44 10 30V14z"/><path class="draw" d="M23 32l7 7 12-14"/></svg>`,
-  personHeart:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle class="draw" cx="26" cy="20" r="9"/><path class="draw" d="M10 52c0-10 7-16 16-16 4 0 7 1 10 3"/><path class="draw" d="M52 38c3 2 3 7-1 10l-6 5-6-5c-4-3-4-8-1-10 2-2 5-1 7 1 2-2 5-3 7-1z"/></svg>`,
-  bulb:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path class="draw" d="M32 8c11 0 18 8 18 18 0 7-4 11-7 15-2 2-2 4-2 6H23c0-2 0-4-2-6-3-4-7-8-7-15 0-10 7-18 18-18z"/><path class="draw" d="M26 56h12M28 50h8"/></svg>`,
-  unity:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle class="draw" cx="22" cy="24" r="10"/><circle class="draw" cx="42" cy="24" r="10"/><path class="draw" d="M12 52c0-7 5-12 10-12s10 5 10 12M32 52c0-7 5-12 10-12s10 5 10 12"/></svg>`,
-  target:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle class="draw" cx="30" cy="34" r="20"/><circle class="draw" cx="30" cy="34" r="10"/><path class="draw" d="M30 34 56 8M44 8h12v12"/></svg>`,
-  badge:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect class="draw" x="12" y="10" width="40" height="44" rx="8"/><circle class="draw" cx="32" cy="26" r="7"/><path class="draw" d="M20 46c2-7 6-10 12-10s10 3 12 10"/></svg>`,
-  gauge:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path class="draw" d="M10 44a22 22 0 1 1 44 0"/><path class="draw" d="M32 44 44 28"/><circle cx="32" cy="44" r="3.4" fill="currentColor" stroke="none"/></svg>`,
-  coins:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><ellipse class="draw" cx="32" cy="18" rx="16" ry="7"/><path class="draw" d="M16 18v10c0 4 7 7 16 7s16-3 16-7V18"/><path class="draw" d="M16 28v10c0 4 7 7 16 7s16-3 16-7V28"/></svg>`,
-  shieldLock:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path class="draw" d="M32 6 54 14v16c0 14-9 24-22 28C19 54 10 44 10 30V14z"/><rect class="draw" x="24" y="28" width="16" height="14" rx="3"/><path class="draw" d="M27 28v-4a5 5 0 0 1 10 0v4"/></svg>`,
-  globe:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle class="draw" cx="32" cy="32" r="22"/><path class="draw" d="M10 32h44M32 10c8 8 8 36 0 44M32 10c-8 8-8 36 0 44"/></svg>`,
-  trend:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path class="draw" d="M10 44 26 30l8 8 18-20"/><path class="draw" d="M42 18h12v12"/></svg>`,
-  cap:`<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path class="draw" d="M32 12 56 24 32 36 8 24z"/><path class="draw" d="M18 30v12c0 4 6 8 14 8s14-4 14-8V30"/><path class="draw" d="M56 24v12"/></svg>`,
-};
+  const BRISK_VALUES = [
+    { name: "Team Work", color: "var(--blue)" },
+    { name: "Integrity", color: "var(--white)" },
+    { name: "Transformation", color: "var(--green)" },
+    { name: "Innovation", color: "var(--blue)" },
+    { name: "Excellence", color: "var(--gold)" }
+  ];
 
-/* ============================================================
-   CONTENT
-   ============================================================ */
-const BRISK_VALUES = [
-  {n:"Team Work",     c:"var(--blue)"},
-  {n:"Integrity",     c:"var(--orange)"},
-  {n:"Transformation",c:"var(--green)"},
-  {n:"Innovation",    c:"var(--sky)"},
-  {n:"Excellence",    c:"var(--gold)"},
-];
+  const AGF_VALUES = [
+    {
+      name: "Integrity",
+      description: "Honest, trustworthy, reliable, transparent and accountable in every dealing.",
+      color: "var(--orange)"
+    },
+    {
+      name: "Customer First",
+      description: "We meet our internal and external customers’ expectations—always.",
+      color: "var(--green)"
+    },
+    {
+      name: "Creativity",
+      description: "We embrace new ideas and respond swiftly to a changing market.",
+      color: "var(--gold)"
+    },
+    {
+      name: "Unity of Purpose",
+      description: "We dedicate ourselves to pursuing agreed, common goals together.",
+      color: "var(--orange)"
+    },
+    {
+      name: "Right First Time",
+      description: "We deliver on our commitments accurately and promptly.",
+      color: "var(--green)"
+    }
+  ];
 
-const AGF_VALUES = [
-  {n:"Integrity",        d:"Honest, trustworthy, reliable, transparent and accountable in every dealing.", ico:I.shieldCheck},
-  {n:"Customer First",   d:"We meet our internal and external customers' expectations — always.",          ico:I.personHeart},
-  {n:"Creativity",       d:"We embrace new ideas and respond swiftly to a changing market.",               ico:I.bulb},
-  {n:"Unity of Purpose", d:"We dedicate ourselves to pursuing agreed, common goals together.",             ico:I.unity},
-  {n:"Right First Time", d:"We deliver on our commitments accurately and promptly.",                       ico:I.target},
-];
+  const CREDIT_CS = [
+    {
+      name: "Character",
+      accent: "#2098F0",
+      tint: "#ECF8FF",
+      image: "c-character.png",
+      definition: "Will they repay? Read the borrower’s track record, reputation and honesty.",
+      brisk: "We confirm character through CRB checks, repayment history and witnesses who personally know the client and the business.",
+      signal: "95.84% repayment rate—character pays."
+    },
+    {
+      name: "Capacity",
+      accent: "#37B24D",
+      tint: "#EAF8ED",
+      image: "c-capacity.png",
+      definition: "Can they repay? Understand the cash flow and income available to service the loan.",
+      brisk: "Our R.O.s visit the business, observe daily takings and size the loan to real cash flow—never beyond what the business can carry.",
+      signal: "KES 5,000–100,000, matched to the business."
+    },
+    {
+      name: "Capital",
+      accent: "#FFB45A",
+      tint: "#FFF5DF",
+      image: "c-capital.png",
+      definition: "What have they invested? Look for the borrower’s own stake in the venture.",
+      brisk: "A client with capital in stock, tools or land has skin in the game—and more reason to protect the business and keep repaying.",
+      signal: "Own contribution means shared commitment."
+    },
+    {
+      name: "Collateral",
+      accent: "#F86818",
+      tint: "#FFF1E8",
+      image: "c-collateral.png",
+      definition: "What backs the loan? Identify the security or relationship the lender can rely on.",
+      brisk: "Brisk lends largely unsecured, so relationship is security: paired R.O.s, witnesses, group standing and M-PESA verification.",
+      signal: "Relationship is our security."
+    },
+    {
+      name: "Conditions",
+      accent: "#2098F0",
+      tint: "#F3FBFF",
+      image: "c-conditions.png",
+      definition: "What is the context? Consider purpose, terms, season and the wider economy.",
+      brisk: "We weigh the purpose, season and market conditions—lending for productive use that grows the client’s wealth.",
+      signal: "Right loan. Right purpose. Right time."
+    }
+  ];
 
-const CS = [
-  { c:"Character",  color:"var(--blue)",  ico:I.badge, img:"c-character.png",
-    def:"Will they repay? A borrower's track record, reputation and honesty.",
-    brisk:"We confirm character through CRB checks, repayment history and witnesses who personally know the client and the business.",
-    foot:"95.84% repayment rate — character pays." },
-  { c:"Capacity",   color:"var(--green)", ico:I.gauge, img:"c-capacity.png",
-    def:"Can they repay? The cash flow and income available to service the loan.",
-    brisk:"Our R.O.s visit the business, observe daily takings and size the loan to real cash flow — never beyond what the business can carry.",
-    foot:"Loans KES 5,000 – 100,000, matched to the business." },
-  { c:"Capital",    color:"var(--gold)",  ico:I.coins, img:"c-capital.png",
-    def:"What have they invested? The borrower's own stake in the venture.",
-    brisk:"A client with their own capital in stock, tools or land has skin in the game — and far more reason to keep repaying.",
-    foot:"Own contribution = shared commitment." },
-  { c:"Collateral", color:"var(--orange)",ico:I.shieldLock, img:"c-collateral.png",
-    def:"What backs the loan? Security the lender can fall back on.",
-    brisk:"Brisk lends largely unsecured — so our collateral is relationship: paired R.O.s, witnesses, group standing and M-PESA verification.",
-    foot:"Relationship is our security." },
-  { c:"Conditions", color:"var(--sky)",   ico:I.globe, img:"c-conditions.png",
-    def:"What's the context? Loan purpose, terms and the wider economy.",
-    brisk:"We weigh the purpose, the season and market conditions — lending for productive use that grows the client's wealth.",
-    foot:"Right loan, right purpose, right time." },
-];
-
-/* ============================================================
-   SCENE BUILDERS  ->  {html, accent, soft, chapter, dur}
-   ============================================================ */
-const scenes = [];
-function add(s){ scenes.push(s); }
-
-/* 1 — Title */
-add({chapter:"Welcome aboard", accent:"var(--orange)", soft:"var(--orange-soft)", dur:6500, html:`
-  <div class="center">
-    <span class="eyebrow rv" style="--d:.15s">Staff Learning Series</span>
-    <h1 class="big rv" style="--d:.3s">Know your<br>craft.</h1>
-    <p class="sub rv" style="--d:.6s">Our values, our partner's standards, and the timeless 5 Cs of lending — the foundations of every good loan we make.</p>
-  </div>`});
-
-/* 2 — Vision / Mission */
-add({chapter:"Who we are", accent:"var(--blue)", soft:"var(--sky)", dur:8000, html:`
-  <div class="center">
-    <span class="eyebrow rv" style="--d:.1s">Brisk Credit Ltd</span>
-    <div class="script rv" style="--d:.3s">Our Vision</div>
-    <h2 class="head rv" style="--d:.45s">To become Africa's most<br>valued digital financial partner.</h2>
-    <p class="sub rv" style="--d:.8s"><b style="color:#fff">Mission —</b> to provide our customers with superior financial solutions to grow their wealth.</p>
-  </div>`});
-
-/* 3 — Brisk core values */
-add({chapter:"Our values", accent:"var(--orange)", soft:"var(--orange-soft)", dur:8000, html:`
-  <div class="center">
-    <span class="eyebrow rv" style="--d:.1s">Brisk Core Values</span>
-    <h2 class="head rv" style="--d:.25s">What we stand on.</h2>
-    <div class="chips" style="margin-top:1vh">
-      ${BRISK_VALUES.map((v,i)=>`<span class="chip rv s" style="--d:${.45+i*.13}s"><i style="background:${v.c}"></i>${v.n}</span>`).join("")}
-    </div>
-  </div>`});
-
-/* 4 — AGF intro */
-add({chapter:"Our partner", accent:"var(--blue)", soft:"var(--sky)", dur:8000, html:`
-  <div class="center">
-    <span class="eyebrow rv" style="--d:.1s">African Guarantee Fund</span>
-    <h2 class="head rv" style="--d:.25s">Backed by AGF.</h2>
-    <p class="sub rv" style="--d:.55s">A pan-African fund that guarantees lending to small businesses — so we can serve the customers banks overlook. Their standards are our standards.</p>
-    <div class="script rv" style="--d:.85s">Five values we share.</div>
-  </div>`});
-
-/* 5 — AGF values grid */
-add({chapter:"AGF values", accent:"var(--blue)", soft:"var(--sky)", dur:10000, html:`
-  <div style="text-align:center">
-    <span class="eyebrow rv" style="--d:.1s;justify-content:center">The AGF standard</span>
-    <h2 class="head rv" style="--d:.25s;margin:8px 0 3vh">Values we live by.</h2>
-    <div class="grid g5">
-      ${AGF_VALUES.map((v,i)=>`
-        <div class="card rv" style="--d:${.4+i*.14}s;--c:var(--blue)">
-          <div class="ico" style="color:var(--sky)">${v.ico}</div>
-          <h3>${v.n}</h3><p>${v.d}</p>
-        </div>`).join("")}
-    </div>
-  </div>`});
-
-/* 6 — 5 Cs overview */
-add({chapter:"The 5 Cs of Credit", accent:"var(--orange)", soft:"var(--gold)", dur:8500, html:`
-  <div class="center">
-    <span class="eyebrow rv" style="--d:.1s">Every loan, judged by five</span>
-    <h2 class="head rv" style="--d:.25s">The 5 Cs of Credit.</h2>
-    <div class="objrow">
-      ${CS.map((x,i)=>`<div class="othumb rv s" style="--d:${.4+i*.12}s;--c:${x.color}">
-        <div class="otimg"><div class="othalo"></div><img src="${x.img}" alt="${x.c}" /></div>
-        <span>${x.c}</span></div>`).join("")}
-    </div>
-    <p class="sub rv" style="--d:1.1s">The lens every lender uses to answer one question — <b style="color:#fff">will this loan be repaid?</b></p>
-  </div>`});
-
-/* 7-11 — each C in detail */
-CS.forEach((x,i)=>{
-  add({chapter:`5 Cs · ${x.c}`, accent:x.color, soft:x.color, dur:9000, html:`
-    <div class="clayout" style="--c:${x.color}">
-      <div class="cmark rv s" style="--d:.15s">
-        <div class="cobj">
-          <div class="ring r2"></div><div class="ring"></div>
-          <div class="halo"></div>
-          <div class="ghost">${x.c[0]}</div>
-          <img class="obj" src="${x.img}" alt="${x.c}" />
+  const scenes = [
+    {
+      chapter: "Start here",
+      accent: "#F86818",
+      background: "#FFFFFF",
+      duration: 9000,
+      className: "hero",
+      html: `
+        <div class="hero-media">
+          <img src="academy-hero.webp" alt="Kenyan entrepreneur and credit professional reviewing business performance together" />
         </div>
-      </div>
-      <div class="cright">
-        <div class="cstep rv" style="--d:.3s">C ${i+1} of 5</div>
-        <h2 class="rv" style="--d:.42s">${x.c}</h2>
-        <p class="cdef rv" style="--d:.58s">${x.def}</p>
-        <div class="briskway rv" style="--d:.78s">
-          <div class="lab">★ The Brisk Way</div>
-          <p>${x.brisk}</p>
-        </div>
-        <p class="rv" style="--d:1s;margin-top:14px;color:${x.color};font-weight:700;font-size:clamp(13px,1.4vw,20px)">${x.foot}</p>
-      </div>
-    </div>`});
-});
+        <div class="scene-frame">
+          <div class="hero-copy">
+            <span class="scene-kicker"><i></i> Credit craft · Module 01</span>
+            <h1 class="display">Sharper decisions. Stronger businesses.</h1>
+            <p class="lead">Think like a lender. Build like a partner. Apply the Brisk way with confidence.</p>
+            <div class="hero-signals" aria-label="Module outcomes">
+              <span>Read the business</span>
+              <span>Protect the portfolio</span>
+              <span>Grow customer wealth</span>
+            </div>
+          </div>
+        </div>`
+    },
+    {
+      chapter: "Our ambition",
+      accent: "#F86818",
+      background: "#2098F0",
+      duration: 9000,
+      className: "vision",
+      html: `
+        <div class="scene-frame vision-frame">
+          <div class="vision-copy">
+            <span class="scene-kicker"><i></i> The future we are building</span>
+            <h2 class="display">Africa’s most valued digital financial partner.</h2>
+            <div class="mission">
+              <strong>OUR MISSION</strong>
+              <p>Provide customers with superior financial solutions that grow their wealth.</p>
+            </div>
+          </div>
+          <figure class="africa-stage">
+            <img src="brisk-mark.png" alt="Brisk client in an Africa-shaped frame" />
+          </figure>
+        </div>`
+    },
+    {
+      chapter: "How we show up",
+      accent: "#2098F0",
+      background: "#F86818",
+      duration: 9000,
+      className: "values",
+      html: `
+        <div class="scene-frame values-frame">
+          <div class="values-intro">
+            <span class="scene-kicker"><i></i> Brisk core values</span>
+            <h2 class="display">Standards you can see.</h2>
+            <p>Values matter when they shape the next customer conversation, credit decision and colleague interaction.</p>
+          </div>
+          <div class="value-stack">
+            ${BRISK_VALUES.map(value => `
+              <div class="value-word" style="--dot:${value.color}">${value.name}</div>
+            `).join("")}
+          </div>
+        </div>`
+    },
+    {
+      chapter: "Our guarantee partner",
+      accent: "#F86818",
+      background: "#FFFFFF",
+      duration: 9000,
+      className: "partner",
+      html: `
+        <div class="scene-frame partner-frame">
+          <div class="partner-copy">
+            <span class="scene-kicker"><i></i> African Guarantee Fund</span>
+            <h2 class="display">Backed to say yes responsibly.</h2>
+            <p class="lead">AGF guarantees lending to small businesses so Brisk can serve customers traditional banks often overlook.</p>
+          </div>
+          <div class="agf-mark" aria-label="African Guarantee Fund">
+            <strong>AGF</strong>
+            <span>Pan-African support for SME growth</span>
+          </div>
+        </div>`
+    },
+    {
+      chapter: "The AGF standard",
+      accent: "#F86818",
+      background: "#2098F0",
+      duration: 11000,
+      className: "agf-values",
+      html: `
+        <div class="scene-frame agf-values-frame">
+          <div class="agf-values-head">
+            <h2>Five values. One standard.</h2>
+            <p>AGF’s principles become practical behaviours in every Brisk customer and partner relationship.</p>
+          </div>
+          <div class="standards">
+            ${AGF_VALUES.map((value, index) => `
+              <div class="standard-row" style="--row-color:${value.color}">
+                <b>${String(index + 1).padStart(2, "0")}</b>
+                <h3>${value.name}</h3>
+                <p>${value.description}</p>
+              </div>
+            `).join("")}
+          </div>
+        </div>`
+    },
+    {
+      chapter: "The decision lens",
+      accent: "#2098F0",
+      background: "#37B24D",
+      duration: 9000,
+      className: "lens",
+      html: `
+        <div class="scene-frame lens-frame">
+          <div class="lens-number">
+            <strong>5</strong>
+            <span>one confident decision</span>
+          </div>
+          <div class="lens-copy">
+            <span class="scene-kicker"><i></i> The 5 Cs of Credit</span>
+            <h2 class="display">Five lenses. One complete borrower.</h2>
+            <p class="lead">Use every C before answering the question that matters: will this loan be repaid?</p>
+            <div class="lens-track" aria-label="The five Cs">
+              ${CREDIT_CS.map(item => `<span>${item.name}</span>`).join("")}
+            </div>
+          </div>
+        </div>`
+    },
+    ...CREDIT_CS.map((item, index) => ({
+      chapter: `C${index + 1} · ${item.name}`,
+      accent: item.accent,
+      background: item.tint,
+      duration: 10000,
+      className: "credit-detail",
+      html: `
+        <div class="scene-frame credit-frame">
+          <div class="credit-copy">
+            <div class="credit-step"><b>${index + 1}</b> C ${index + 1} of 5</div>
+            <h2 class="credit-title">${item.name}</h2>
+            <p class="credit-definition">${item.definition}</p>
+            <div class="brisk-way">
+              <strong>THE BRISK WAY</strong>
+              <p>${item.brisk}</p>
+            </div>
+            <p class="field-signal">${item.signal}</p>
+          </div>
+          <figure class="credit-visual">
+            <img src="${item.image}" alt="${item.name}, one of the five Cs of credit" />
+            <figcaption>Evidence first. Judgement second. Partnership always.</figcaption>
+          </figure>
+        </div>`
+    })),
+    {
+      chapter: "Put it to work",
+      accent: "#F86818",
+      background: "#FFFFFF",
+      duration: 10000,
+      className: "final",
+      html: `
+        <div class="scene-frame final-frame">
+          <div class="final-copy">
+            <span class="scene-kicker"><i></i> The Brisk standard</span>
+            <h2 class="display">Clarity builds trust. Trust grows wealth.</h2>
+            <p class="lead">Character first. Capacity proven. Capital shared. Collateral or relationship. Conditions right.</p>
+          </div>
+          <div class="final-orbit" aria-label="The five Cs working together">
+            <span>Ch</span>
+            <span>Ca</span>
+            <span>Co</span>
+            <span>Cl</span>
+            <span>Cn</span>
+          </div>
+        </div>`
+    }
+  ];
 
-/* 12 — recap / CTA */
-add({chapter:"Lend smart", accent:"var(--orange)", soft:"var(--orange-soft)", dur:8000, html:`
-  <div class="center">
-    <span class="eyebrow rv" style="--d:.1s">Put it to work</span>
-    <h1 class="big rv" style="--d:.28s">Lend smart.<br>Grow wealth.</h1>
-    <div class="chips rv" style="--d:.6s">
-      ${CS.map(x=>`<span class="chip" style="font-size:clamp(13px,1.4vw,20px);padding:10px 18px"><i style="background:${x.color}"></i>${x.c}</span>`).join("")}
-    </div>
-    <p class="sub rv" style="--d:.9s">Character first. Capacity proven. Capital shared. Collateral or relationship. Conditions right. — That's the Brisk standard.</p>
-  </div>`});
+  const stage = document.getElementById("stage");
+  const progressNav = document.getElementById("progressNav");
+  const topProgress = document.getElementById("topProgress");
+  const chapterName = document.getElementById("chapterName");
+  const sceneCount = document.getElementById("sceneCount");
+  const pauseButton = document.getElementById("pauseButton");
+  const fullscreenButton = document.getElementById("fullscreenButton");
 
-/* ============================================================
-   RENDER + SEQUENCE
-   ============================================================ */
-const stage=document.getElementById('stage');
-const dotsBox=document.getElementById('dots');
-const prog=document.getElementById('prog');
-const chapterEl=document.getElementById('chapter');
-const a1=document.querySelector('.a1'),a3=document.querySelector('.a3');
+  stage.innerHTML = scenes.map((scene, index) => `
+    <section
+      class="scene ${scene.className}"
+      style="--scene-bg:${scene.background};--scene-accent:${scene.accent}"
+      aria-label="${scene.chapter}"
+      aria-hidden="${index === 0 ? "false" : "true"}"
+    >${scene.html}</section>
+  `).join("");
 
-const els = scenes.map((s,i)=>{
-  const sec=document.createElement('section');
-  sec.className='scene'; sec.innerHTML=s.html; stage.appendChild(sec);
-  const b=document.createElement('b'); dotsBox.appendChild(b);
-  return sec;
-});
-const dotEls=[...dotsBox.children];
+  progressNav.innerHTML = scenes.map((scene, index) => `
+    <button
+      type="button"
+      style="--dot:${scene.accent}"
+      aria-label="Open scene ${index + 1}: ${scene.chapter}"
+      data-index="${index}"
+    >${index + 1}</button>
+  `).join("");
 
-let idx=-1, timer=null, progRAF=null, segStart=0, segDur=0;
-function setAccent(a,soft){
-  const r=document.documentElement.style;
-  r.setProperty('--accent',a); r.setProperty('--accent-soft',soft);
-}
-function show(n){
-  if(idx>=0) els[idx].classList.remove('on');
-  idx=n;
-  const s=scenes[n];
-  setAccent(s.accent,s.soft);
-  chapterEl.textContent=s.chapter;
-  dotEls.forEach((d,i)=>d.classList.toggle('on',i===n));
-  // little aurora pulse on transition
-  a1.style.opacity='0.62'; setTimeout(()=>a1.style.opacity='',260);
-  els[n].classList.add('on');
-  // progress bar
-  segStart=performance.now(); segDur=s.dur;
-  clearTimeout(timer);
-  timer=setTimeout(()=>show((n+1)%scenes.length), s.dur);
-}
-function progFrame(t){
-  progRAF=requestAnimationFrame(progFrame);
-  if(document.hidden) return;
-  const p=Math.min(1,(t-segStart)/segDur);
-  prog.style.width=(p*100)+'%';
-}
-show(0); requestAnimationFrame(progFrame);
+  const sceneElements = [...stage.children];
+  const progressButtons = [...progressNav.children];
+  let currentIndex = 0;
+  let timer = null;
+  let sceneStartedAt = performance.now();
+  let elapsedBeforePause = 0;
+  let paused = false;
+  let visibilityPaused = false;
 
-// keep timing sane if tab was hidden a long time
-document.addEventListener('visibilitychange',()=>{ if(!document.hidden){ segStart=performance.now(); } });
+  function scheduleNext() {
+    clearTimeout(timer);
+    if (paused) return;
+    const remaining = Math.max(250, scenes[currentIndex].duration - elapsedBeforePause);
+    timer = setTimeout(() => showScene((currentIndex + 1) % scenes.length), remaining);
+  }
 
-/* ---------------- live clock ---------------- */
-function tick(){
-  const n=new Date();
-  document.getElementById('clk').textContent=
-    String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0');
-  document.getElementById('date').textContent=
-    n.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
-}
-tick(); setInterval(tick,15000);
+  function showScene(nextIndex) {
+    const normalized = (nextIndex + scenes.length) % scenes.length;
+    sceneElements[currentIndex].classList.remove("is-active");
+    sceneElements[currentIndex].setAttribute("aria-hidden", "true");
 
-/* ---------------- particle constellation (30fps, pauses hidden) ---------------- */
-const cv=document.getElementById('net'),ctx=cv.getContext('2d');
-let W,H,DPR,nodes=[],time=0,_last=0;
-const BRAND=[[255,106,24],[34,156,239],[108,200,255],[255,180,90]];
-function size(){
-  DPR=Math.min(window.devicePixelRatio||1,1.25);
-  W=cv.width=innerWidth*DPR;H=cv.height=innerHeight*DPR;
-  cv.style.width=innerWidth+'px';cv.style.height=innerHeight+'px';
-  const count=Math.round(Math.min(48,Math.max(24,(innerWidth*innerHeight)/40000)));
-  nodes=Array.from({length:count},mk);
-}
-function mk(){const c=BRAND[(Math.random()*BRAND.length)|0];
-  return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.16*DPR,vy:(Math.random()-.5)*.16*DPR,
-    r:(Math.random()*1.6+.7)*DPR,c,tw:Math.random()*6.28};}
-const LINK=150;
-function frame(ts){
-  requestAnimationFrame(frame);
-  if(document.hidden) return;
-  if(ts-_last<32) return; _last=ts; time+=.018;
-  ctx.clearRect(0,0,W,H);
-  for(const n of nodes){n.vx*=.99;n.vy*=.99;n.x+=n.vx;n.y+=n.vy;
-    if(n.x<0||n.x>W)n.vx*=-1; if(n.y<0||n.y>H)n.vy*=-1;}
-  for(let i=0;i<nodes.length;i++){const a=nodes[i];
-    for(let j=i+1;j<nodes.length;j++){const b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
-      if(d<LINK*DPR){const al=(1-d/(LINK*DPR))*(.22+.05*Math.sin(time+i+j));
-        ctx.strokeStyle=`rgba(${(a.c[0]+b.c[0])/2},${(a.c[1]+b.c[1])/2},${(a.c[2]+b.c[2])/2},${al})`;
-        ctx.lineWidth=DPR*.6;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}}
-  for(const n of nodes){n.tw+=.04;const al=.45+Math.sin(n.tw)*.33;
-    ctx.fillStyle=`rgba(${n.c[0]},${n.c[1]},${n.c[2]},${al})`;
-    ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,7);ctx.fill();}
-}
-addEventListener('resize',size); size(); requestAnimationFrame(frame);
+    currentIndex = normalized;
+    const scene = scenes[currentIndex];
+    const element = sceneElements[currentIndex];
+    element.classList.add("is-active");
+    element.setAttribute("aria-hidden", "false");
 
-/* ---------------- fullscreen + toast ---------------- */
-const toast=document.getElementById('toast');
-function goFS(){const el=document.documentElement;
-  (el.requestFullscreen||el.webkitRequestFullscreen||el.msRequestFullscreen||(()=>{})).call(el);}
-window.addEventListener('click',goFS);
-window.addEventListener('keydown',e=>{ if((e.key||'').toLowerCase()==='f'){e.preventDefault();goFS();} });
-setTimeout(()=>toast.classList.add('hide'),6500);
-document.addEventListener('fullscreenchange',()=>{ if(document.fullscreenElement)toast.classList.add('hide'); });
+    document.documentElement.style.setProperty("--accent", scene.accent);
+    chapterName.textContent = scene.chapter;
+    sceneCount.textContent = `${String(currentIndex + 1).padStart(2, "0")} / ${String(scenes.length).padStart(2, "0")}`;
+    progressButtons.forEach((button, index) => {
+      button.classList.toggle("is-active", index === currentIndex);
+      button.setAttribute("aria-current", index === currentIndex ? "step" : "false");
+    });
+
+    elapsedBeforePause = 0;
+    sceneStartedAt = performance.now();
+    scheduleNext();
+  }
+
+  function setPaused(nextPaused) {
+    if (paused === nextPaused) return;
+    paused = nextPaused;
+
+    if (paused) {
+      elapsedBeforePause = Math.min(
+        scenes[currentIndex].duration,
+        elapsedBeforePause + performance.now() - sceneStartedAt
+      );
+      clearTimeout(timer);
+    } else {
+      sceneStartedAt = performance.now();
+      scheduleNext();
+    }
+
+    pauseButton.textContent = paused ? "Resume" : "Pause";
+    pauseButton.setAttribute("aria-pressed", String(paused));
+  }
+
+  function progressFrame(now) {
+    const elapsed = Math.min(
+      scenes[currentIndex].duration,
+      elapsedBeforePause + (paused ? 0 : now - sceneStartedAt)
+    );
+    topProgress.style.width = `${(elapsed / scenes[currentIndex].duration) * 100}%`;
+    requestAnimationFrame(progressFrame);
+  }
+
+  progressButtons.forEach(button => {
+    button.addEventListener("click", () => showScene(Number(button.dataset.index)));
+  });
+
+  pauseButton.addEventListener("click", () => setPaused(!paused));
+
+  fullscreenButton.addEventListener("click", async () => {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen?.();
+    } else {
+      await document.documentElement.requestFullscreen?.();
+    }
+  });
+
+  document.addEventListener("fullscreenchange", () => {
+    fullscreenButton.textContent = document.fullscreenElement ? "Exit screen" : "Fullscreen";
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "ArrowRight") showScene(currentIndex + 1);
+    if (event.key === "ArrowLeft") showScene(currentIndex - 1);
+    if ((event.key || "").toLowerCase() === "f") fullscreenButton.click();
+    if (event.code === "Space") {
+      event.preventDefault();
+      setPaused(!paused);
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden && !paused) {
+      visibilityPaused = true;
+      setPaused(true);
+    } else if (!document.hidden && visibilityPaused) {
+      visibilityPaused = false;
+      setPaused(false);
+    }
+  });
+
+  function updateClock() {
+    const now = new Date();
+    document.getElementById("clockTime").textContent =
+      `${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}`;
+    document.getElementById("clockDate").textContent =
+      now.toLocaleDateString("en-GB", { day: "2-digit", month: "short" }).toUpperCase();
+  }
+
+  updateClock();
+  setInterval(updateClock, 15000);
+  showScene(0);
+  requestAnimationFrame(progressFrame);
 </script>
-<div class="vignette"></div>
-<div class="grain"></div>
 </body>
 </html>

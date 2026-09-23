@@ -7,3 +7,6 @@ Thumbs.db
 kilimo-*-raw.png
 tue-raw-*.png
 _chk_*.png
+
+# local code graph (graphify); rebuilt on every commit, never published
+graphify-out/

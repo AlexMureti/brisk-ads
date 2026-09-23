@@ -8,11 +8,13 @@
     <script src="brisk-live/gsap.min.js"></script>
     <script src="brisk-live/map.js"></script>
     <style>
-      /* "Brisk, Live" — 45 s silent loop for the office screens.
+      /* "Brisk, Live" — 49.4 s silent loop for the office screens.
          Every claim is Brisk's own published fact (public MCP get_brisk_loan_products /
          list_brisk_branches, 19 Sep 2026) or Brisk Academy wording. No rates, no AGF claim,
          no phone number, no taglines (those are for ads). Images: Brisk Academy's own.
-         Scenes: 0 map · 9.2 offer · 21.6 the 5 Cs · 34.8 loan officer · 40.6 logo → loops. */
+         Scenes: 0 map · 9.2 offer · 21.6 the 5 Cs · 34.8 loan officer · 40.6 logo reveal → loops.
+         The logo reveal is Alex's clip (Brisk_Credit_logo_reveal_20260923114358.mp4, 23 Sep 2026),
+         cut at its frame 144: "Your flexible financial partner." starts typing at frame 146. */
       @font-face { font-family: "Geist"; src: url("brisk-live/Geist.ttf") format("truetype"); font-weight: 100 900; }
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { width: 100%; height: 100%; overflow: hidden; background: #03101a; cursor: none; }
@@ -74,14 +76,13 @@
       #talk h2 span { color: #c2510c; }
       #talk p { margin-top: 40px; font-size: 48px; font-weight: 600; color: #0b2a3d; }
 
-      /* 5 · logo */
-      #s5 { background: #ffffff; }
-      #logo { position: absolute; left: 50%; top: 439px; width: 900px; margin-left: -450px; }
-      #night { position: absolute; inset: 0; background: #03101a; }
+      /* 5 · logo reveal: the clip plays under s5, whose curtain and night fade it in and out */
+      #reveal { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #curtain, #night { position: absolute; inset: 0; background: #03101a; }
     </style>
   </head>
   <body>
-    <div id="stage"><div id="root" data-composition-id="main" data-start="0" data-duration="45" data-width="1920" data-height="1080">
+    <div id="stage"><div id="root" data-composition-id="main" data-start="0" data-duration="49.4" data-width="1920" data-height="1080">
 
       <!-- 1 · 42 branches -->
       <section id="s1" class="scene clip" data-start="0" data-duration="9.8" data-track-index="0" data-layout-allow-overlap>
@@ -183,10 +184,14 @@
         </div>
       </section>
 
-      <!-- 5 · logo, then fade to night so the loop restarts on the dark map -->
-      <section id="s5" class="scene clip" data-start="40.6" data-duration="4.4" data-track-index="4" data-layout-allow-overlap>
+      <!-- 5 · logo reveal (Alex's clip), faded in from night and back out to it, so the loop
+           restarts on the dark map. The video is timed on its own: a timed wrapper around a
+           timed video shows the wrong source frames (hyperframes lint video_nested_in_timed_element).
+           The file runs 8.875 s against this 8.8 s window on purpose, so its held last frame never runs out. -->
+      <video id="reveal" class="clip" src="brisk-live/brisk-logo-reveal.mp4" data-start="40.6" data-duration="8.8" data-track-index="4" muted playsinline></video>
+      <section id="s5" class="scene clip" data-start="40.6" data-duration="8.8" data-track-index="5" data-layout-allow-overlap>
         <div id="w5" class="wrap">
-          <img id="logo" src="brisk-live/brisk-logo.png" alt="Brisk Credit Ltd" />
+          <div id="curtain"></div>
           <div id="night"></div>
         </div>
       </section>
@@ -350,19 +355,26 @@
         tl.fromTo("#talkP", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 36.0);
         tl.to("#w4", { opacity: 0, duration: 0.4, ease: "power1.in" }, 40.2);
 
-        // ───────────── 5 · logo → night (40.6 – 45) ─────────────
-        tl.fromTo("#w5", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 40.6);
-        tl.fromTo("#logo", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }, 40.9);
-        tl.fromTo("#night", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "power1.inOut" }, 44.1);
+        // ───────────── 5 · logo reveal → night (40.6 – 49.4) ─────────────
+        // clip 40.6–46.64, its last clean frame held to the end; the name is whole from ~46.4
+        tl.fromTo("#curtain", { opacity: 1 }, { opacity: 0, duration: 0.5, ease: "power1.out" }, 40.6);
+        tl.fromTo("#night", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "power1.inOut" }, 48.5);
 
-        // show each scene only inside its window (the Hyperframes runtime does this in the video)
+        // show each scene only inside its window, and start a clip's video once per window
+        // (the Hyperframes runtime does both in the rendered video)
         var clips = [].slice.call(document.querySelectorAll(".clip")).map(function (el) {
           var a = parseFloat(el.dataset.start), d = parseFloat(el.dataset.duration);
           return { el: el, a: a, b: a + d };
         });
         function showClips() {
           var t = tl.time();
-          clips.forEach(function (c) { c.el.style.visibility = t >= c.a && t < c.b ? "visible" : "hidden"; });
+          clips.forEach(function (c) {
+            var on = t >= c.a && t < c.b;
+            c.el.style.visibility = on ? "visible" : "hidden";
+            if (c.el.tagName !== "VIDEO") return;
+            if (on && !c.run) { c.run = true; c.el.currentTime = t - c.a; var p = c.el.play(); if (p && p.catch) p.catch(function () {}); }
+            else if (!on && c.run) { c.run = false; c.el.pause(); }
+          });
         }
         tl.eventCallback("onUpdate", showClips); showClips();
       });

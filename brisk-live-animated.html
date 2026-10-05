@@ -8,11 +8,19 @@
     <script src="brisk-live/gsap.min.js"></script>
     <script src="brisk-live/map.js"></script>
     <style>
-      /* "Brisk, Live" — 49.4 s silent loop for the office screens.
+      /* "Brisk, Live" — 58.6 s silent loop for the office screens.
          Every claim is Brisk's own published fact (public MCP get_brisk_loan_products /
          list_brisk_branches, 19 Sep 2026) or Brisk Academy wording. No rates, no AGF claim,
          no phone number, no taglines (those are for ads). Images: Brisk Academy's own.
-         Scenes: 0 map · 9.2 offer · 21.6 the 5 Cs · 34.8 loan officer · 40.6 logo reveal → loops.
+         Scenes: 0 map · 9.2 offer · 21.6 the 5 Cs · 34.8 our customers, on film · 49.8 logo reveal → loops.
+         Scene 4 (5 Oct 2026) is customer footage, three takes side by side, three times
+         (make-triptychs.py). The people are generated, not customers, and the scene says so in type
+         large enough to read across a hall.
+         CSW marks Customer Service Week, 5–9 October 2026: a badge over scenes 1–3, and a thank-you
+         in each of scene 4's three sets. render-both.sh renders the loop with CSW on and off, and
+         brisk-live.html (build-web.py) switches files at 00:00 Nairobi time on 10 October.
+         The licence line ("Licensed and regulated by the Central Bank of Kenya", reg. 47(e) of
+         L.N. 191 of 2026) shows under the logo at the end.
          The logo reveal is Alex's clip (Brisk_Credit_logo_reveal_20260923114358.mp4, 23 Sep 2026),
          played whole, so it ends on the tagline "Your flexible financial partner." That is the one
          exception to "no taglines" above, and it is Alex's decision (23 Sep 2026: "I wanted the
@@ -70,21 +78,37 @@
       .cdot { width: 120px; height: 10px; border-radius: 5px; background: rgba(127,198,234,0.25); overflow: hidden; }
       .cdot i { display: block; width: 100%; height: 100%; background: #FF7A30; transform-origin: 0 50%; transform: scaleX(0); }
 
-      /* 4 · talk to us */
-      #w4 { background: #f4f6f7; }
-      #officer { position: absolute; left: -40px; top: -40px; width: 2000px; height: 1160px; object-fit: cover; object-position: 70% 40%; }
-      #talk { position: absolute; left: 110px; top: 320px; width: 900px; }
-      #talk h2 { font-size: 112px; font-weight: 800; line-height: 1.0; letter-spacing: -0.035em; color: #0b2a3d; }
-      #talk h2 span { color: #c2510c; }
-      #talk p { margin-top: 40px; font-size: 48px; font-weight: 600; color: #0b2a3d; }
+      /* 4 · our customers, on film. The three videos sit outside the timed section (hyperframes lint
+         video_nested_in_timed_element). Dark shutters open and close each panel, so the scene comes
+         out of the loop's night and goes back into it. Brand codes here: orange #F86818, blue #2098F0. */
+      .tri { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; }
+      .div4 { position: absolute; top: 0; width: 6px; height: 1080px; background: #fff; }
+      .sh { position: absolute; top: 0; width: 640px; height: 1080px; background: #03101a; }
+      .lab { position: absolute; top: 548px; height: 80px; padding: 0 34px 0 28px; border-radius: 40px; background: #fff; box-shadow: 0 10px 30px rgba(3,16,26,0.35); font-size: 40px; font-weight: 700; line-height: 80px; color: #0b2a3d; white-space: nowrap; }
+      .lab i { display: inline-block; width: 16px; height: 16px; margin-right: 16px; border-radius: 50%; background: #F86818; vertical-align: 4px; }
+      /* the band: an eyebrow, then one big line and a two-line answer per set; the AI line sits under it,
+         inside title-safe (y <= 1026) and large enough to read from the back of a hall */
+      #band { position: absolute; left: 0; top: 650px; width: 1920px; height: 560px; background: #fff; border-top: 8px solid #F86818; }
+      #cswE { position: absolute; left: 100px; top: 30px; font-size: 34px; font-weight: 800; line-height: 1.2; letter-spacing: 0.18em; color: #1273CF; white-space: nowrap; }
+      #cswE b { color: #F86818; }
+      .bh { position: absolute; left: 92px; top: 102px; font-size: 150px; font-weight: 800; line-height: 1; letter-spacing: -0.04em; color: #0b2a3d; white-space: nowrap; }
+      .bh span { color: #F86818; }
+      .bp { position: absolute; right: 100px; top: 114px; font-size: 56px; font-weight: 700; line-height: 1.14; color: #0b2a3d; text-align: right; white-space: nowrap; }
+      .bp span { display: block; }
+      #fine { position: absolute; left: 100px; top: 962px; font-size: 34px; font-weight: 700; line-height: 1.2; color: #0B3A6B; white-space: nowrap; }
+      /* Customer Service Week badge over scenes 1-3 (CSW only) */
+      #cswBadge { position: absolute; right: 100px; top: 54px; height: 76px; padding: 0 34px 0 28px; border-radius: 38px; background: #fff; box-shadow: 0 10px 30px rgba(3,16,26,0.45); font-size: 30px; font-weight: 800; letter-spacing: 0.12em; line-height: 76px; color: #0b2a3d; white-space: nowrap; opacity: 0; }
+      #cswBadge i { display: inline-block; width: 16px; height: 16px; margin-right: 16px; border-radius: 50%; background: #F86818; vertical-align: 3px; }
+      #cswBadge b { color: #F86818; }
 
       /* 5 · logo reveal: the clip plays under s5, whose curtain and night fade it in and out */
       #reveal { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
       #curtain, #night { position: absolute; inset: 0; background: #03101a; }
+      #cbk { position: absolute; left: 0; right: 0; top: 880px; text-align: center; font-size: 40px; font-weight: 600; letter-spacing: 0.01em; color: #e6eef5; opacity: 0; }
     </style>
   </head>
   <body>
-    <div id="stage"><div id="root" data-composition-id="main" data-start="0" data-duration="49.4" data-width="1920" data-height="1080">
+    <div id="stage"><div id="root" data-composition-id="main" data-start="0" data-duration="58.6" data-width="1920" data-height="1080">
 
       <!-- 1 · 42 branches -->
       <section id="s1" class="scene clip" data-start="0" data-duration="9.8" data-track-index="0" data-layout-allow-overlap>
@@ -175,14 +199,34 @@
         </div>
       </section>
 
-      <!-- 4 · talk to a loan officer -->
-      <section id="s4" class="scene clip" data-start="34.8" data-duration="6.2" data-track-index="3" data-layout-allow-overlap>
+      <!-- Customer Service Week badge over scenes 1-3 (shown only when CSW is on) -->
+      <div id="cswBadge" data-layout-allow-overlap><i></i>CUSTOMER SERVICE WEEK <b>·</b> 5–9 OCT</div>
+
+      <!-- 4 · our customers, on film: three takes side by side, three times (assets/video/tri-*.mp4,
+           made by make-triptychs.py from the October leads footage). Each video is timed on its own. -->
+      <video id="triA" class="clip tri" src="brisk-live/tri-a.mp4" data-start="34.8" data-duration="5" data-track-index="6" muted playsinline></video>
+      <video id="triB" class="clip tri" src="brisk-live/tri-b.mp4" data-start="39.8" data-duration="5" data-track-index="7" muted playsinline></video>
+      <video id="triC" class="clip tri" src="brisk-live/tri-c.mp4" data-start="44.8" data-duration="5" data-track-index="8" muted playsinline></video>
+      <section id="s4" class="scene clip" data-start="34.8" data-duration="15.2" data-track-index="3" data-layout-allow-overlap>
         <div id="w4" class="wrap">
-          <img id="officer" src="brisk-live/officer.jpg" alt="" />
-          <div id="talk">
-            <h2 id="talkH">Talk to a loan officer <span>today.</span></h2>
-            <p id="talkP">Ask at the front desk.</p>
+          <div class="div4" style="left:637px"></div><div class="div4" style="left:1277px"></div>
+          <div class="sh" id="sh1" style="left:0"></div><div class="sh" id="sh2" style="left:640px"></div><div class="sh" id="sh3" style="left:1280px"></div>
+          <div class="lab" data-layout-allow-overlap data-layout-allow-occlusion id="la1" style="left:100px"><i></i>Boda boda</div>
+          <div class="lab" data-layout-allow-overlap data-layout-allow-occlusion id="la2" style="left:740px"><i></i>Mama mboga</div>
+          <div class="lab" data-layout-allow-overlap data-layout-allow-occlusion id="la3" style="left:1380px"><i></i>Salon</div>
+          <div class="lab" data-layout-allow-overlap data-layout-allow-occlusion id="lb1" style="left:100px"><i></i>Duka</div>
+          <div class="lab" data-layout-allow-overlap data-layout-allow-occlusion id="lb2" style="left:740px"><i></i>Fundi wa nguo</div>
+          <div class="lab" data-layout-allow-overlap data-layout-allow-occlusion id="lb3" style="left:1380px"><i></i>Mkulima</div>
+          <div id="band">
+            <p id="cswE" data-layout-allow-overlap>CUSTOMER SERVICE WEEK <b>·</b> 5–9 OCTOBER 2026</p>
+            <h2 class="bh" id="hA" data-layout-allow-overlap>Asante <span>sana.</span></h2>
+            <p class="bp" id="pA" data-layout-allow-overlap><span>Thank you for</span><span>choosing Brisk.</span></p>
+            <h2 class="bh" id="hB" data-layout-allow-overlap>Karibu <span>sana.</span></h2>
+            <p class="bp" id="pB" data-layout-allow-overlap><span>Ask us anything</span><span>at the front desk.</span></p>
+            <h2 class="bh" id="hC" data-layout-allow-overlap>Tuko <span>nawe.</span></h2>
+            <p class="bp" id="pC" data-layout-allow-overlap><span>Every day, not</span><span>just this week.</span></p>
           </div>
+          <p id="fine" data-layout-allow-overlap>People shown are AI-generated, not real customers.</p>
         </div>
       </section>
 
@@ -190,10 +234,11 @@
            restarts on the dark map. The video is timed on its own: a timed wrapper around a
            timed video shows the wrong source frames (hyperframes lint video_nested_in_timed_element).
            The file runs 8.875 s against this 8.8 s window on purpose, so its held last frame never runs out. -->
-      <video id="reveal" class="clip" src="brisk-live/brisk-logo-reveal.mp4" data-start="40.6" data-duration="8.8" data-track-index="4" muted playsinline></video>
-      <section id="s5" class="scene clip" data-start="40.6" data-duration="8.8" data-track-index="5" data-layout-allow-overlap>
+      <video id="reveal" class="clip" src="brisk-live/brisk-logo-reveal.mp4" data-start="49.8" data-duration="8.8" data-track-index="4" muted playsinline></video>
+      <section id="s5" class="scene clip" data-start="49.8" data-duration="8.8" data-track-index="5" data-layout-allow-overlap>
         <div id="w5" class="wrap">
           <div id="curtain"></div>
+          <p id="cbk">Licensed and regulated by the Central Bank of Kenya</p>
           <div id="night"></div>
         </div>
       </section>
@@ -350,17 +395,64 @@
         }
         tl.to("#w3", { opacity: 0, duration: 0.4, ease: "power1.in" }, 34.4);
 
-        // ───────────── 4 · talk to a loan officer (34.6 – 41) ─────────────
-        tl.fromTo("#w4", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power1.out" }, 34.8);
-        tl.fromTo("#officer", { scale: 1.0, x: 0 }, { scale: 1.08, x: -40, duration: 6.2, ease: "none" }, 34.8);
-        tl.fromTo("#talkH", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 35.3);
-        tl.fromTo("#talkP", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 36.0);
-        tl.to("#w4", { opacity: 0, duration: 0.4, ease: "power1.in" }, 40.2);
+        // ───────────── 4 · our customers, on film (34.8 – 49.8) ─────────────
+        // Three sets of three takes, 5 s each: A 34.8, B 39.8, C 44.8. Each panel has a dark shutter:
+        // it slides away, comes back over while the take underneath is swapped, and slides away again.
+        var T4 = 34.8;
+        var CSW = new Date().getTime() < Date.parse("2026-10-09T21:00:00Z");   // Customer Service Week, 5–9 October 2026 (render-both.sh renders it on and off)
+        if (!CSW) {       // after the week: the same band, the call to the front desk and an everyday thank-you
+          var setT = function (id, html) { document.getElementById(id).innerHTML = html; };
+          setT("cswE", "WATEJA WETU <b>·</b> OUR CUSTOMERS");
+          setT("hA", "Karibu <span>Brisk.</span>"); setT("pA", "<span>Talk to a loan</span><span>officer today.</span>");
+          setT("hB", "Asante <span>sana.</span>"); setT("pB", "<span>Thank you for</span><span>choosing Brisk.</span>");
+          setT("hC", "Tuko <span>nawe.</span>"); setT("pC", "<span>Ask at the</span><span>front desk.</span>");
+        }
+        function shutters(open, at) {
+          [["#sh1", -1], ["#sh2", 1], ["#sh3", -1]].forEach(function (p, k) {
+            if (open) tl.fromTo(p[0], { y: 0 }, { y: p[1] * 1080, duration: 0.55, ease: "power3.inOut", immediateRender: false }, at + k * 0.09);
+            else tl.fromTo(p[0], { y: -p[1] * 1080 }, { y: 0, duration: 0.4, ease: "power2.in", immediateRender: false }, at + k * 0.07);
+          });
+        }
+        function pills(ids, at, until) {      // not "labels": the map above already has a var of that name
+          ids.forEach(function (id, k) {
+            tl.fromTo(id, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, at + k * 0.14);
+            tl.to(id, { opacity: 0, scale: 0.9, duration: 0.2, ease: "power1.in" }, until);
+          });
+        }
+        // one line per set: the big line lands, its answer follows, both leave while the shutters close
+        function says(h, p, at, until) {
+          tl.fromTo(h, { opacity: 0, y: 44, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "back.out(1.5)" }, at);
+          tl.fromTo(p, { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, at + 0.3);
+          if (until) tl.to([h, p], { opacity: 0, y: -26, duration: 0.3, ease: "power2.in" }, until);
+        }
+        shutters(true, T4 + 0.1);
+        tl.fromTo("#band", { y: 480 }, { y: 0, duration: 0.6, ease: "power3.out" }, T4 + 0.3);
+        tl.fromTo("#cswE", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, T4 + 0.7);
+        tl.fromTo("#fine", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.out" }, T4 + 1.1);
+        says("#hA", "#pA", T4 + 0.8, T4 + 4.45);
+        pills(["#la1", "#la2", "#la3"], T4 + 0.95, T4 + 4.25);
+        shutters(false, T4 + 4.42);                       // closed by 39.76; set B starts under them at 39.8
+        shutters(true, T4 + 5.08);
+        says("#hB", "#pB", T4 + 5.2, T4 + 9.45);
+        pills(["#lb1", "#lb2", "#lb3"], T4 + 5.9, T4 + 9.25);
+        shutters(false, T4 + 9.42);                       // closed by 44.76; set C starts under them at 44.8
+        shutters(true, T4 + 10.08);
+        says("#hC", "#pC", T4 + 10.2, 0);
+        tl.to(["#hC", "#pC", "#cswE", "#fine"], { opacity: 0, duration: 0.3, ease: "power1.in" }, T4 + 14.15);
+        tl.to("#band", { y: 480, duration: 0.45, ease: "power2.in" }, T4 + 14.35);
+        shutters(false, T4 + 14.4);                       // closed by 49.74: back into the night, then the logo
 
-        // ───────────── 5 · logo reveal → night (40.6 – 49.4) ─────────────
-        // the whole clip plays 40.6–48.6 (tagline typed by ~47.6); its last frame holds under the fade to night
-        tl.fromTo("#curtain", { opacity: 1 }, { opacity: 0, duration: 0.5, ease: "power1.out" }, 40.6);
-        tl.fromTo("#night", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "power1.inOut" }, 48.5);
+        // the Customer Service Week badge rides over scenes 1-3, and leaves before the customers arrive
+        if (CSW) {
+          tl.fromTo("#cswBadge", { opacity: 0, y: -18 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.0);
+          tl.to("#cswBadge", { opacity: 0, y: -18, duration: 0.35, ease: "power1.in" }, 34.0);
+        }
+
+        // ───────────── 5 · logo reveal → night (49.8 – 58.6) ─────────────
+        // the whole clip plays 49.8–57.8 (tagline typed by ~56.8); its last frame holds under the fade to night
+        tl.fromTo("#curtain", { opacity: 1 }, { opacity: 0, duration: 0.5, ease: "power1.out" }, 49.8);
+        tl.fromTo("#cbk", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 54.3);   // the licence line, under the logo
+        tl.fromTo("#night", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "power1.inOut" }, 57.7);
 
         // show each scene only inside its window, and start a clip's video once per window
         // (the Hyperframes runtime does both in the rendered video)

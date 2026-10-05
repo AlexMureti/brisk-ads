@@ -18,7 +18,7 @@
       // Which loop plays: Customer Service Week until 00:00 Nairobi time on 10 Oct 2026, then the
       // everyday loop. brisk-live/version.json is read every 15 minutes and can point the page at new
       // files; the video changes in place, so a TV left in fullscreen stays in fullscreen.
-      var CFG = { csw: "brisk-live/brisk-live-720p-v5-csw.mp4", main: "brisk-live/brisk-live-720p-v5-csw.mp4", cswEnds: Date.parse("2026-10-09T21:00:00Z") };
+      var CFG = { csw: "brisk-live/brisk-live-720p-v5-csw.mp4", main: "brisk-live/brisk-live-720p-v5.mp4", cswEnds: Date.parse("2026-10-09T21:00:00Z") };
       var v = document.getElementById("loop");
       function want() { return new Date().getTime() < CFG.cswEnds ? CFG.csw : CFG.main; }
       function play() { var p = v.play(); if (p && p.catch) p.catch(function () {}); }

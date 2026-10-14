@@ -1,33 +1,23 @@
-# Brisk Credit — Web Screens & Ads
+# brisk-ads
 
-Self-contained, animated brand screens for the web (and office signage). Pure static HTML/CSS/JS + images — no build step, no dependencies.
+Office-screen loops and web brand screens for Brisk Credit, a Kenyan lender. Each page is a self-contained HTML file meant to run full-screen on a branch TV or in a browser: a staff-learning broadcast, product and seasonal ads, an animated branch map, and a pre-rendered video loop with a date-switched campaign cut.
 
-## Pages
-| File | What it is |
-|------|------------|
-| `index.html` | Launcher / landing page linking to each screen |
-| `academy.html` | Brisk Academy staff-learning broadcast: values, AGF standards and the 5 Cs of Credit |
-| `fathers-day.html` | Father's Day ad (auto-updating countdown to the 3rd Sunday of June) |
-| `signage.html` | Evergreen office/branch signage screen |
-| `og-card.png` | 1200×630 social share image for link previews |
+## Live
 
-Press **F** on any screen for fullscreen. They loop forever; fonts fall back to a system font if offline.
+https://alexmureti.github.io/brisk-ads/ — the index links to every screen. Press F on any screen for fullscreen.
 
-## Deploy to GitHub Pages
+## Stack
 
-1. Create a new repo on GitHub named **`brisk-ads`** (public).
-2. From this folder, push it up:
-   ```bash
-   git remote add origin https://github.com/YOURNAME/brisk-ads.git
-   git branch -M main
-   git push -u origin main
-   ```
-3. On GitHub: **Settings → Pages → Build and deployment → Source: "Deploy from a branch"**, branch **`main`**, folder **`/ (root)`**, then **Save**.
-4. Your site goes live in ~1 minute at:
-   `https://alexmureti.github.io/brisk-ads/`
+- Static HTML, CSS and vanilla JavaScript. No framework, no build step, no package manager.
+- GSAP 3.14.2, vendored, drives the timeline loops (`branches.html`, `brisk-live-animated.html`); the Kenya outline and branch coordinates are data in `branches/map.js`.
+- Canvas 2D and SVG for ambient animation; HTML5 video for the rendered loop.
+- Manrope and Playfair Display from Google Fonts; Geist self-hosted.
+- Hosted on GitHub Pages (`.nojekyll`).
 
-### One thing to update for nice link previews
-The social-share (`og:`) tags in `index.html` and `fathers-day.html` contain a placeholder base URL `https://briskcredit.github.io/brisk-ads/`. After you know your live URL, find-and-replace **`YOURNAME`** with your GitHub username (and adjust the repo name if you used a different one) so WhatsApp/Facebook/Twitter previews show the Father's Day card.
+## Run locally
 
-## Custom domain (optional)
-To serve at e.g. `ads.brisk-credit.co.ke`, add a `CNAME` file containing that hostname and point a DNS CNAME record at `briskcredit.github.io`.
+There is no package.json and nothing to build. Open `index.html` in a browser, or serve the folder with any static file server. `brisk-live.html` polls `brisk-live/version.json` every 15 minutes to swap its video in place; that fetch needs the folder served over HTTP, not opened from disk.
+
+## Status
+
+Live and maintained; last push 12 October 2026. Three older pages (`partner`, `kilimo`, `fathers-day`) still carry a placeholder base URL in their social-share tags.
